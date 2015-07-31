@@ -6,15 +6,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import java.awt.Color;
-import java.awt.Font;
 
-public class TelaPrincipal {
+public class TelaLoginAdministrador {
 
 	private JFrame frmLaluEscolaDe;
 	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -23,7 +20,7 @@ public class TelaPrincipal {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaPrincipal window = new TelaPrincipal();
+					TelaLoginAdministrador window = new TelaLoginAdministrador();
 					window.frmLaluEscolaDe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +32,7 @@ public class TelaPrincipal {
 	/**
 	 * Create the application.
 	 */
-	public TelaPrincipal() {
+	public TelaLoginAdministrador() {
 		initialize();
 	}
 
@@ -49,44 +46,31 @@ public class TelaPrincipal {
 		frmLaluEscolaDe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLaluEscolaDe.getContentPane().setLayout(null);
 		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBounds(167, 186, 89, 23);
+		frmLaluEscolaDe.getContentPane().add(btnVoltar);
+		
 		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(177, 160, 99, 23);
+		btnEntrar.setBounds(167, 152, 89, 23);
 		frmLaluEscolaDe.getContentPane().add(btnEntrar);
 		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
-		lblUsurio.setBounds(120, 93, 46, 14);
+		lblUsurio.setBounds(91, 79, 46, 14);
 		frmLaluEscolaDe.getContentPane().add(lblUsurio);
 		
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(120, 132, 34, 14);
+		lblSenha.setBounds(91, 112, 46, 14);
 		frmLaluEscolaDe.getContentPane().add(lblSenha);
 		
 		textField = new JTextField();
-		textField.setBounds(167, 90, 117, 20);
+		textField.setBounds(147, 76, 132, 20);
 		frmLaluEscolaDe.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(167, 129, 117, 20);
-		frmLaluEscolaDe.getContentPane().add(passwordField);
-		
-		JLabel lblNovoCadastro = new JLabel("Novo Cadastro");
-		lblNovoCadastro.setForeground(Color.BLUE);
-		lblNovoCadastro.setBounds(342, 236, 82, 14);
-		frmLaluEscolaDe.getContentPane().add(lblNovoCadastro);
-		
-		JLabel lblSair = new JLabel("Sair");
-		lblSair.setForeground(Color.BLUE);
-		lblSair.setBounds(10, 236, 46, 14);
-		frmLaluEscolaDe.getContentPane().add(lblSair);
-		
-		JLabel lblAcessoAoSistema = new JLabel(" Acesso ao sistema");
-		lblAcessoAoSistema.setFont(new Font("Gisha", Font.PLAIN, 19));
-		lblAcessoAoSistema.setBounds(135, 23, 171, 37);
-		frmLaluEscolaDe.getContentPane().add(lblAcessoAoSistema);
-		
-		JButton btnAdministardor = new JButton("Administrador");
-		btnAdministardor.setBounds(177, 194, 99, 23);
-		frmLaluEscolaDe.getContentPane().add(btnAdministardor);
+		textField_1 = new JTextField();
+		textField_1.setBounds(147, 109, 132, 20);
+		frmLaluEscolaDe.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
 	}
+
 }
