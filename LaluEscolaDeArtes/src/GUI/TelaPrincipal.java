@@ -70,11 +70,6 @@ public class TelaPrincipal {
 		passwordField.setBounds(167, 129, 117, 20);
 		frmLaluEscolaDe.getContentPane().add(passwordField);
 		
-		JLabel lblNovoCadastro = new JLabel("Novo Cadastro");
-		lblNovoCadastro.setForeground(Color.BLUE);
-		lblNovoCadastro.setBounds(342, 236, 82, 14);
-		frmLaluEscolaDe.getContentPane().add(lblNovoCadastro);
-		
 		JLabel lblSair = new JLabel("Sair");
 		lblSair.setForeground(Color.BLUE);
 		lblSair.setBounds(10, 236, 46, 14);

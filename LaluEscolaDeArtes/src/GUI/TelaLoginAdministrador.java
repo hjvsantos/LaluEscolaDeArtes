@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -45,6 +46,11 @@ public class TelaLoginAdministrador {
 		frmLaluEscolaDe.setBounds(100, 100, 450, 300);
 		frmLaluEscolaDe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLaluEscolaDe.getContentPane().setLayout(null);
+		
+		JLabel lblAcessoAoSistema = new JLabel(" Acesso ao sistema");
+		lblAcessoAoSistema.setFont(new Font("Gisha", Font.PLAIN, 19));
+		lblAcessoAoSistema.setBounds(135, 23, 171, 37);
+		frmLaluEscolaDe.getContentPane().add(lblAcessoAoSistema);
 		
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setBounds(167, 186, 89, 23);
