@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Font;
 
 public class TelaPrincipalFuncionario {
 
@@ -75,6 +76,11 @@ public class TelaPrincipalFuncionario {
 		lblSair.setForeground(Color.BLUE);
 		lblSair.setBounds(10, 236, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblSair);
+		
+		JLabel lblIncio = new JLabel("In\u00EDcio");
+		lblIncio.setFont(new Font("Gisha", Font.PLAIN, 22));
+		lblIncio.setBounds(171, 11, 66, 50);
+		frmLaluAcademiaDe.getContentPane().add(lblIncio);
 	}
 
 }
