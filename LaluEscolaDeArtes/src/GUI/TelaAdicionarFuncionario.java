@@ -71,7 +71,7 @@ public class TelaAdicionarFuncionario {
 		frame.getContentPane().add(lblNome);
 		
 		textField = new JTextField();
-		textField.setBounds(45, 64, 330, 23);
+		textField.setBounds(45, 64, 379, 23);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
