@@ -85,7 +85,7 @@ public class TelaPrincipal {
 		lblAcessoAoSistema.setBounds(135, 23, 171, 37);
 		frmLaluEscolaDe.getContentPane().add(lblAcessoAoSistema);
 		
-		JButton btnAdministardor = new JButton("Administardor");
+		JButton btnAdministardor = new JButton("Administrador");
 		btnAdministardor.setBounds(177, 194, 99, 23);
 		frmLaluEscolaDe.getContentPane().add(btnAdministardor);
 	}
