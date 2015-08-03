@@ -49,10 +49,6 @@ public class TelaPrincipal {
 		frmLaluEscolaDe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLaluEscolaDe.getContentPane().setLayout(null);
 		
-		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(177, 160, 99, 23);
-		frmLaluEscolaDe.getContentPane().add(btnEntrar);
-		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
 		lblUsurio.setBounds(120, 93, 46, 14);
 		frmLaluEscolaDe.getContentPane().add(lblUsurio);
@@ -80,8 +76,8 @@ public class TelaPrincipal {
 		lblAcessoAoSistema.setBounds(135, 23, 171, 37);
 		frmLaluEscolaDe.getContentPane().add(lblAcessoAoSistema);
 		
-		JButton btnAdministardor = new JButton("Administrador");
-		btnAdministardor.setBounds(177, 194, 99, 23);
+		JButton btnAdministardor = new JButton("Entrar");
+		btnAdministardor.setBounds(177, 168, 99, 23);
 		frmLaluEscolaDe.getContentPane().add(btnAdministardor);
 	}
 }
