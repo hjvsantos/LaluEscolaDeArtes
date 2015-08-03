@@ -68,10 +68,6 @@ public class TelaPrincipalFuncionario {
 		btnMatrcula.setBounds(122, 133, 140, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnMatrcula);
 		
-		JButton btnCancelarMatrcula = new JButton("Cancelar Matr\u00EDcula");
-		btnCancelarMatrcula.setBounds(122, 168, 140, 23);
-		frmLaluAcademiaDe.getContentPane().add(btnCancelarMatrcula);
-		
 		JLabel lblSair = new JLabel("Sair");
 		lblSair.setForeground(Color.BLUE);
 		lblSair.setBounds(10, 236, 46, 14);

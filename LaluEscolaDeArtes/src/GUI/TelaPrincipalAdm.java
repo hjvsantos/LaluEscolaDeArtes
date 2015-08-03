@@ -79,6 +79,9 @@ public class TelaPrincipalAdm {
 		JButton btnCriarUmNovo = new JButton(" Criar um novo usu\u00E1rio");
 		btnCriarUmNovo.setBounds(115, 183, 171, 23);
 		frmAcademiaDeArtes.getContentPane().add(btnCriarUmNovo);
+		
+		JButton btnNovaMatrcula = new JButton("Nova Matr\u00EDcula");
+		btnNovaMatrcula.setBounds(115, 217, 171, 23);
+		frmAcademiaDeArtes.getContentPane().add(btnNovaMatrcula);
 	}
-
 }

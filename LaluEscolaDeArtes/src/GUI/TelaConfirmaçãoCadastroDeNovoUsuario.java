@@ -46,9 +46,9 @@ public class TelaConfirmaçãoCadastroDeNovoUsuario {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNovoUsurio = new JLabel("Novo Usu\u00E1rio");
+		JLabel lblNovoUsurio = new JLabel("Confirma\u00E7\u00E3o de Cadastro");
 		lblNovoUsurio.setFont(new Font("Gisha", Font.PLAIN, 22));
-		lblNovoUsurio.setBounds(138, 11, 164, 37);
+		lblNovoUsurio.setBounds(65, 11, 262, 37);
 		frame.getContentPane().add(lblNovoUsurio);
 		
 		JLabel lblAdm = new JLabel("Adm:");

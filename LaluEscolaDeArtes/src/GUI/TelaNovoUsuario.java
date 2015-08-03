@@ -14,6 +14,7 @@ public class TelaNovoUsuario {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
+	private JTextField textField_3;
 
 	/**
 	 * Launch the application.
@@ -70,7 +71,7 @@ public class TelaNovoUsuario {
 		frame.getContentPane().add(btnConfirmar);
 		
 		JLabel lblUsernmae = new JLabel("Username:");
-		lblUsernmae.setBounds(82, 113, 59, 30);
+		lblUsernmae.setBounds(66, 113, 59, 30);
 		frame.getContentPane().add(lblUsernmae);
 		
 		textField_1 = new JTextField();
@@ -86,6 +87,14 @@ public class TelaNovoUsuario {
 		textField_2.setBounds(138, 147, 200, 20);
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
+		
+		JLabel lblConfirmarSenha = new JLabel("Confirmar Senha:");
+		lblConfirmarSenha.setBounds(32, 181, 96, 14);
+		frame.getContentPane().add(lblConfirmarSenha);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(138, 178, 200, 20);
+		frame.getContentPane().add(textField_3);
+		textField_3.setColumns(10);
 	}
-
 }
