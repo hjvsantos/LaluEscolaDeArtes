@@ -13,12 +13,12 @@ public class Aluno {
 	public Date dataNascimento;
 	public double telefone;
 	public Date dataPagamento;
-	public boolean pagamento;
+	public boolean mensalidade;
 	
 	public Aluno(String nome, String endereco, String nomeResponsavel,
 			String cPF, String cPFresponsavel, String rG, String email,
 			Date dataNascimento, double telefone, Date dataPagamento,
-			boolean pagamento) {
+			boolean mensalidade) {
 		super();
 		this.nome = nome;
 		this.endereco = endereco;
@@ -30,7 +30,7 @@ public class Aluno {
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.dataPagamento = dataPagamento;
-		this.pagamento = pagamento;
+		this.mensalidade = mensalidade;
 	}
 
 	public String getNome() {
@@ -113,12 +113,12 @@ public class Aluno {
 		this.dataPagamento = dataPagamento;
 	}
 
-	public boolean isPagamento() {
-		return pagamento;
+	public boolean isMensalidade() {
+		return mensalidade;
 	}
 
-	public void setPagamento(boolean pagamento) {
-		this.pagamento = pagamento;
+	public void setMensalidade(boolean mensalidade) {
+		this.mensalidade = mensalidade;
 	}
 	
 	
