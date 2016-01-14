@@ -14,11 +14,13 @@ public class Funcionario {
 	private String user;
 	private String senha;
 	public String email;
+	public double horario;
+	public String dia;
 	
 	
 	public Funcionario(String nome, String cPF, double rg, Date dataNascimento,
 			double telefone, String endereço, String funcao, String user,
-			String senha, String email) {
+			String senha, String email, double horario, String dia) {
 	
 		this.nome = nome;
 		CPF = cPF;
@@ -30,6 +32,8 @@ public class Funcionario {
 		this.user = user;
 		this.senha = senha;
 		this.email = email;
+		this.horario = horario;
+		this.dia = dia;
 	}
 
 
@@ -105,6 +109,26 @@ public class Funcionario {
 
 	public void setFuncao(String funcao) {
 		this.funcao = funcao;
+	}
+
+
+	public double getHorario() {
+		return horario;
+	}
+
+
+	public void setHorario(double horario) {
+		this.horario = horario;
+	}
+
+
+	public String getDia() {
+		return dia;
+	}
+
+
+	public void setDia(String dia) {
+		this.dia = dia;
 	}
 	
 	
