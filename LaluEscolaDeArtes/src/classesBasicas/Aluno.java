@@ -131,6 +131,4 @@ public class Aluno {
 		this.nota = nota;
 	}
 	
-	
-	
 }
