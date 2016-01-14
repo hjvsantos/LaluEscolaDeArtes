@@ -14,12 +14,13 @@ public class Aluno {
 	public double telefone;
 	public Date dataPagamento;
 	public boolean mensalidade;
+	public double valormensalidade;
 	public float nota;
 		
 	public Aluno(String nome, String endereco, String nomeResponsavel,
 			String cPF, String cPFresponsavel, String rG, String email,
 			Date dataNascimento, double telefone, Date dataPagamento,
-			boolean mensalidade, float nota) {
+			boolean mensalidade, float nota, double valormensalidade) {
 		
 		this.nome = nome;
 		this.endereco = endereco;
@@ -33,6 +34,7 @@ public class Aluno {
 		this.dataPagamento = dataPagamento;
 		this.mensalidade = mensalidade;
 		this.nota = nota;
+		this.valormensalidade = valormensalidade;
 	}
 
 	public String getNome() {
@@ -129,6 +131,14 @@ public class Aluno {
 
 	public void setNota(float nota) {
 		this.nota = nota;
+	}
+
+	public double getValormensalidade() {
+		return valormensalidade;
+	}
+
+	public void setValormensalidade(double valormensalidade) {
+		this.valormensalidade = valormensalidade;
 	}
 	
 }
