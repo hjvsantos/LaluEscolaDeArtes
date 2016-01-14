@@ -7,19 +7,13 @@ import classesBasicas.Atividade;
 public class Matricula {
 	
 	public Aluno aluno;
-	public Funcionario professor;
-	public Funcionario dia;
-	public Funcionario horario;
-	public Administrador turma;
+	public Turma turma;
+	public String codigo;
 	
-	public Matricula(Aluno aluno, Funcionario professor, Funcionario dia,
-			Funcionario horario, Administrador turma) {
-		super();
+	public Matricula(Aluno aluno, Turma turma, String codigo) {
 		this.aluno = aluno;
-		this.professor = professor;
-		this.dia = dia;
-		this.horario = horario;
 		this.turma = turma;
+		this.codigo = codigo;
 	}
 
 	public Aluno getAluno() {
@@ -30,39 +24,21 @@ public class Matricula {
 		this.aluno = aluno;
 	}
 
-	public Funcionario getProfessor() {
-		return professor;
-	}
-
-	public void setProfessor(Funcionario professor) {
-		this.professor = professor;
-	}
-
-	public Funcionario getDia() {
-		return dia;
-	}
-
-	public void setDia(Funcionario dia) {
-		this.dia = dia;
-	}
-
-	public Funcionario getHorario() {
-		return horario;
-	}
-
-	public void setHorario(Funcionario horario) {
-		this.horario = horario;
-	}
-
-	public Administrador getTurma() {
+	public Turma getTurma() {
 		return turma;
 	}
 
-	public void setTurma(Administrador turma) {
+	public void setTurma(Turma turma) {
 		this.turma = turma;
 	}
-	
-	
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 	
 	
 }

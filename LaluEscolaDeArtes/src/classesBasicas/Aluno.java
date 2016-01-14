@@ -13,15 +13,14 @@ public class Aluno {
 	public Date dataNascimento;
 	public double telefone;
 	public Date dataPagamento;
-	public boolean mensalidade;
+	public Matricula matricula;
 	public double valormensalidade;
-	public float nota;
-		
+	
 	public Aluno(String nome, String endereco, String nomeResponsavel,
 			String cPF, String cPFresponsavel, String rG, String email,
 			Date dataNascimento, double telefone, Date dataPagamento,
-			boolean mensalidade, float nota, double valormensalidade) {
-		
+			Matricula matricula, double valormensalidade) {
+		super();
 		this.nome = nome;
 		this.endereco = endereco;
 		this.nomeResponsavel = nomeResponsavel;
@@ -32,8 +31,7 @@ public class Aluno {
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.dataPagamento = dataPagamento;
-		this.mensalidade = mensalidade;
-		this.nota = nota;
+		this.matricula = matricula;
 		this.valormensalidade = valormensalidade;
 	}
 
@@ -117,20 +115,12 @@ public class Aluno {
 		this.dataPagamento = dataPagamento;
 	}
 
-	public boolean isMensalidade() {
-		return mensalidade;
+	public Matricula getMatricula() {
+		return matricula;
 	}
 
-	public void setMensalidade(boolean mensalidade) {
-		this.mensalidade = mensalidade;
-	}
-
-	public float getNota() {
-		return nota;
-	}
-
-	public void setNota(float nota) {
-		this.nota = nota;
+	public void setMatricula(Matricula matricula) {
+		this.matricula = matricula;
 	}
 
 	public double getValormensalidade() {
@@ -140,5 +130,5 @@ public class Aluno {
 	public void setValormensalidade(double valormensalidade) {
 		this.valormensalidade = valormensalidade;
 	}
-	
-}
+			
+	}

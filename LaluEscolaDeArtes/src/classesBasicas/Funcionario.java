@@ -11,16 +11,12 @@ public class Funcionario {
 	public double telefone;
 	public String endereço;
 	public String funcao;
-	private String user;
-	private String senha;
-	public String email;
-	public double horario;
-	public String dia;
-	
+	public String matricula;
+	public double salario;
 	
 	public Funcionario(String nome, String cPF, double rg, Date dataNascimento,
-			double telefone, String endereço, String funcao, String user,
-			String senha, String email, double horario, String dia) {
+			double telefone, String endereço, String funcao, String matricula,
+			double salario) {
 	
 		this.nome = nome;
 		CPF = cPF;
@@ -29,108 +25,82 @@ public class Funcionario {
 		this.telefone = telefone;
 		this.endereço = endereço;
 		this.funcao = funcao;
-		this.user = user;
-		this.senha = senha;
-		this.email = email;
-		this.horario = horario;
-		this.dia = dia;
+		this.matricula = matricula;
+		this.salario = salario;
 	}
-
 
 	public String getNome() {
 		return nome;
 	}
 
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
-	public double getTelefone() {
-		return telefone;
+	public String getCPF() {
+		return CPF;
 	}
-
-
-	public void setTelefone(double telefone) {
-		this.telefone = telefone;
-	}
-
-
-	public String getUser() {
-		return user;
-	}
-
-
-	public void setUser(String user) {
-		this.user = user;
-	}
-
-
-	public String getSenha() {
-		return senha;
-	}
-
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-
-
-	public String getEmail() {
-		return email;
-	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 
 	public void setCPF(String cPF) {
 		CPF = cPF;
 	}
 
+	public double getRg() {
+		return rg;
+	}
 
 	public void setRg(double rg) {
 		this.rg = rg;
 	}
 
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
 
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
+	public double getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(double telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getEndereço() {
+		return endereço;
+	}
 
 	public void setEndereço(String endereço) {
 		this.endereço = endereço;
 	}
 
+	public String getFuncao() {
+		return funcao;
+	}
 
 	public void setFuncao(String funcao) {
 		this.funcao = funcao;
 	}
 
-
-	public double getHorario() {
-		return horario;
+	public String getMatricula() {
+		return matricula;
 	}
 
-
-	public void setHorario(double horario) {
-		this.horario = horario;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 
-
-	public String getDia() {
-		return dia;
+	public double getSalario() {
+		return salario;
 	}
 
-
-	public void setDia(String dia) {
-		this.dia = dia;
+	public void setSalario(double salario) {
+		this.salario = salario;
 	}
-	
+		
 	
 	
 }

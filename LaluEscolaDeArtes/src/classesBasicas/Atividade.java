@@ -1,64 +1,65 @@
 package classesBasicas;
 
-import classesBasicas.Funcionario;
-
 public class Atividade {
-	public Funcionario funcionario;
-	public double horarioInicio;
-	public double horarioFim;
-	public int quantAlunos;
-	public String diaDaSemana;
 	
-	public Atividade(Funcionario funcionario, double horarioInicio,
-			double horarioFim, int quantAlunos, String diaDaSemana) {
-		super();
-		this.funcionario = funcionario;
-		this.horarioInicio = horarioInicio;
-		this.horarioFim = horarioFim;
-		this.quantAlunos = quantAlunos;
-		this.diaDaSemana = diaDaSemana;
+	public String nome;
+	public int quantidadeAlunos;
+	public String tipo;
+	public double preco;
+	public double duracao;
+	
+	public Atividade(String nome, int quantidadeAlunos, String tipo,
+			double preco, double duracao) {
+		
+		this.nome = nome;
+		this.quantidadeAlunos = quantidadeAlunos;
+		this.tipo = tipo;
+		this.preco = preco;
+		this.duracao = duracao;
 	}
 
-	public Funcionario getFuncionario() {
-		return funcionario;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public double getHorarioInicio() {
-		return horarioInicio;
+	public int getQuantidadeAlunos() {
+		return quantidadeAlunos;
 	}
 
-	public void setHorarioInicio(double horarioInicio) {
-		this.horarioInicio = horarioInicio;
+	public void setQuantidadeAlunos(int quantidadeAlunos) {
+		this.quantidadeAlunos = quantidadeAlunos;
 	}
 
-	public double getHorarioFim() {
-		return horarioFim;
+	public String getTipo() {
+		return tipo;
 	}
 
-	public void setHorarioFim(double horarioFim) {
-		this.horarioFim = horarioFim;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
-	public int getQuantAlunos() {
-		return quantAlunos;
+	public double getPreco() {
+		return preco;
 	}
 
-	public void setQuantAlunos(int quantAlunos) {
-		this.quantAlunos = quantAlunos;
+	public void setPreco(double preco) {
+		this.preco = preco;
 	}
 
-	public String getDiaDaSemana() {
-		return diaDaSemana;
+	public double getDuracao() {
+		return duracao;
 	}
 
-	public void setDiaDaSemana(String diaDaSemana) {
-		this.diaDaSemana = diaDaSemana;
+	public void setDuracao(double duracao) {
+		this.duracao = duracao;
 	}
 	
 	
+	
+		
 	
 }
