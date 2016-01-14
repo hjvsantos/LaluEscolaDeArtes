@@ -19,7 +19,7 @@ public class Funcionario {
 	public Funcionario(String nome, String cPF, double rg, Date dataNascimento,
 			double telefone, String endereço, String funcao, String user,
 			String senha, String email) {
-		super();
+	
 		this.nome = nome;
 		CPF = cPF;
 		this.rg = rg;
