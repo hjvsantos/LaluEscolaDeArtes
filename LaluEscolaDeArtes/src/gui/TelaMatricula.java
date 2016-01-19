@@ -64,6 +64,8 @@ public class TelaMatricula {
 		frmLaluAcademiaDe.setBounds(100, 100, 450, 300);
 		frmLaluAcademiaDe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLaluAcademiaDe.getContentPane().setLayout(null);
+		//frmLaluAcademiaDe.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frmLaluAcademiaDe.BorderLayout();
 		
 		JLabel lblLaluAcademiaDe = new JLabel("Lalu Academia de Artes");
 		lblLaluAcademiaDe.setFocusable(false);
