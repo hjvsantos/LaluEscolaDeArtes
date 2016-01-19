@@ -74,7 +74,7 @@ public class TelaPrincipalAdm {
 		btnMatricular.setFont(new Font("Century Gothic", Font.PLAIN, 11));
 		btnMatricular.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnMatricular.setBorder(new CompoundBorder());
-		btnMatricular.setBounds(22, 118, 89, 23);
+		btnMatricular.setBounds(22, 118, 95, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnMatricular);
 		
 		JLabel lblLaluAcademiaDe = new JLabel("Lalu Academia de Artes");
@@ -101,10 +101,14 @@ public class TelaPrincipalAdm {
 		textField.setColumns(10);
 		
 		JButton btnFuncionrio = new JButton("Funcion\u00E1rio");
-		btnFuncionrio.setBounds(22, 169, 89, 23);
+		btnFuncionrio.setBorder(new CompoundBorder());
+		btnFuncionrio.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnFuncionrio.setBounds(22, 169, 95, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnFuncionrio);
 		
 		JButton btnFinanceiro = new JButton("Financeiro");
+		btnFinanceiro.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnFinanceiro.setBorder(new CompoundBorder());
 		btnFinanceiro.setBounds(178, 169, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnFinanceiro);
 	}
