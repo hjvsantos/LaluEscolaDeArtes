@@ -34,6 +34,9 @@ public class TelaMatriculaFinal {
 	private JFrame frmLaluAcademiaDe;
 	private JTextField textField;
 	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -132,6 +135,25 @@ public class TelaMatriculaFinal {
 		JRadioButton rdbtnBolsista = new JRadioButton("Bolsista");
 		rdbtnBolsista.setBounds(292, 137, 109, 23);
 		frmLaluAcademiaDe.getContentPane().add(rdbtnBolsista);
+		
+		JLabel lblDataParaO = new JLabel("Data para o fim do Contrato:");
+		lblDataParaO.setBounds(10, 179, 145, 14);
+		frmLaluAcademiaDe.getContentPane().add(lblDataParaO);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(156, 171, 28, 20);
+		frmLaluAcademiaDe.getContentPane().add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(194, 171, 28, 20);
+		frmLaluAcademiaDe.getContentPane().add(textField_3);
+		textField_3.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(232, 171, 33, 20);
+		frmLaluAcademiaDe.getContentPane().add(textField_4);
+		textField_4.setColumns(10);
 		
 		
 
