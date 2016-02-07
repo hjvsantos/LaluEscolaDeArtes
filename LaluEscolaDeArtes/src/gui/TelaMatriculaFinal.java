@@ -81,17 +81,19 @@ public class TelaMatriculaFinal {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(77, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnConfirmar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnConfirmar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnConfirmar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnConfirmar.setBounds(292, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnConfirmar);
 		
@@ -115,20 +117,20 @@ public class TelaMatriculaFinal {
 		frmLaluAcademiaDe.getContentPane().add(comboBox_1);
 		
 		JLabel lblMensalidade = new JLabel("Mensalidade:");
-		lblMensalidade.setBounds(10, 141, 70, 14);
+		lblMensalidade.setBounds(10, 141, 89, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblMensalidade);
 		
 		textField = new JTextField();
-		textField.setBounds(77, 137, 78, 23);
+		textField.setBounds(91, 137, 64, 23);
 		frmLaluAcademiaDe.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblDesconto = new JLabel("Desconto:");
-		lblDesconto.setBounds(159, 141, 54, 14);
+		lblDesconto.setBounds(159, 141, 63, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblDesconto);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(211, 137, 64, 23);
+		textField_1.setBounds(221, 137, 54, 23);
 		frmLaluAcademiaDe.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -136,22 +138,22 @@ public class TelaMatriculaFinal {
 		rdbtnBolsista.setBounds(292, 137, 109, 23);
 		frmLaluAcademiaDe.getContentPane().add(rdbtnBolsista);
 		
-		JLabel lblDataParaO = new JLabel("Data para o fim do Contrato:");
-		lblDataParaO.setBounds(10, 179, 145, 14);
+		JLabel lblDataParaO = new JLabel("Fim do Contrato:");
+		lblDataParaO.setBounds(10, 177, 89, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblDataParaO);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(156, 171, 28, 20);
+		textField_2.setBounds(101, 174, 28, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(194, 171, 28, 20);
+		textField_3.setBounds(139, 174, 28, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
 		textField_4 = new JTextField();
-		textField_4.setBounds(232, 171, 33, 20);
+		textField_4.setBounds(177, 174, 33, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_4);
 		textField_4.setColumns(10);
 		

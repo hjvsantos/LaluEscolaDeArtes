@@ -61,23 +61,24 @@ public class TelaListaFuncionarios {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(41, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnEditar = new JButton("Editar");
-		btnEditar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnEditar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnEditar.setBorder(new CompoundBorder());
 		btnEditar.setBounds(165, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnEditar);
 		
 		JButton btnAdicionar = new JButton("Adicionar");
+		btnAdicionar.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 11));
 		btnAdicionar.setBounds(298, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnAdicionar);
 		
 		JLabel lblListaDeFuncionrios = new JLabel("Lista de Funcion\u00E1rios:");
-		lblListaDeFuncionrios.setBounds(10, 51, 104, 14);
+		lblListaDeFuncionrios.setBounds(10, 51, 120, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblListaDeFuncionrios);
 		
 		JPanel panel = new JPanel();

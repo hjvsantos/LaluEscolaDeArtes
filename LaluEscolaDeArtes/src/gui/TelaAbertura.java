@@ -27,7 +27,7 @@ import java.awt.Dialog.ModalExclusionType;
 import java.awt.Toolkit;
 
 public class TelaAbertura {
-
+	private JFrame frame;
 	private JFrame frmLaluAcademiaDe;
 	private JPasswordField passwordField;
 	private JTextField textField;
@@ -107,6 +107,16 @@ public class TelaAbertura {
 		btnAdministrador.setFont(new Font("Century Gothic", Font.BOLD, 11));
 		btnAdministrador.setBounds(162, 203, 107, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnAdministrador);
+		
+		JLabel lblLaluAcademiaDe = new JLabel("Lalu Academia de Artes");
+		lblLaluAcademiaDe.setFocusable(false);
+		lblLaluAcademiaDe.setFont(new Font("Lucida Handwriting", Font.PLAIN, 12));
+		lblLaluAcademiaDe.setBounds(123, 11, 202, 33);
+		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		frmLaluAcademiaDe.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{frmLaluAcademiaDe.getContentPane()}));
 	}
-}
+
+
+		
+	}
+

@@ -12,6 +12,7 @@ import java.awt.Toolkit;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
+import java.awt.Cursor;
 
 public class TelaMatricula {
 
@@ -74,7 +75,7 @@ public class TelaMatricula {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblNome = new JLabel("Nome:");
-		lblNome.setBounds(10, 53, 31, 14);
+		lblNome.setBounds(10, 53, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
 		textField = new JTextField();
@@ -110,11 +111,11 @@ public class TelaMatricula {
 		textField_4.setColumns(10);
 		
 		JLabel lblCpf = new JLabel("CPF:");
-		lblCpf.setBounds(241, 81, 24, 14);
+		lblCpf.setBounds(241, 81, 35, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblCpf);
 		
 		textField_5 = new JTextField();
-		textField_5.setBounds(268, 78, 156, 20);
+		textField_5.setBounds(276, 78, 148, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_5);
 		textField_5.setColumns(10);
 		
@@ -123,7 +124,7 @@ public class TelaMatricula {
 		frmLaluAcademiaDe.getContentPane().add(lblEndereo);
 		
 		textField_6 = new JTextField();
-		textField_6.setBounds(61, 148, 363, 20);
+		textField_6.setBounds(75, 148, 349, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_6);
 		textField_6.setColumns(10);
 		
@@ -173,13 +174,15 @@ public class TelaMatricula {
 		textField_11.setColumns(10);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(102, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnPrximo = new JButton("Pr\u00F3ximo");
-		btnPrximo.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnPrximo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnPrximo.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnPrximo.setBorder(new CompoundBorder());
 		btnPrximo.setBounds(241, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnPrximo);

@@ -13,14 +13,18 @@ import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
 import java.awt.Window.Type;
 import java.awt.Toolkit;
+import java.awt.Cursor;
+import javax.swing.JPanel;
 
 public class TelaConsultaAluno {
 
 	private JFrame frmLaluAcademiaDe;
 	private JTextField textField;
 	private JTextField textField_1;
-	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField textField_2;
+	private JTextField textField_4;
+	private JTextField textField_5;
 
 	/**
 	 * Launch the application.
@@ -79,57 +83,74 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(lblTurma);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(318, 68, 86, 20);
+		textField_1.setBounds(326, 68, 86, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(38, 226, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnAtualizar = new JButton("Atualizar");
+		btnAtualizar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnAtualizar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnAtualizar.setBounds(169, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnAtualizar);
 		
 		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCancelar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnCancelar.setBounds(291, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnCancelar);
 		
 		JLabel lblFimDoContrato = new JLabel("Fim do Contrato:");
-		lblFimDoContrato.setBounds(22, 113, 86, 14);
+		lblFimDoContrato.setBounds(22, 113, 105, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblFimDoContrato);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(109, 110, 86, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_2);
-		textField_2.setColumns(10);
-		
 		JLabel lblAMensalidadeEst = new JLabel("A mensalidade est\u00E1: ");
-		lblAMensalidadeEst.setBounds(22, 157, 100, 14);
+		lblAMensalidadeEst.setBounds(22, 157, 118, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblAMensalidadeEst);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(123, 157, 72, 14);
-		frmLaluAcademiaDe.getContentPane().add(lblNewLabel);
-		
 		JButton btnNewButton = new JButton("Notas");
-		btnNewButton.setBounds(280, 153, 89, 23);
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNewButton.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
+		btnNewButton.setBounds(169, 193, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnNewButton);
 		
 		JLabel lblNDaMatrcula = new JLabel("N\u00BA da matr\u00EDcula:");
-		lblNDaMatrcula.setBounds(205, 113, 86, 14);
+		lblNDaMatrcula.setBounds(241, 157, 97, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNDaMatrcula);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(290, 110, 110, 20);
+		textField_3.setBounds(335, 151, 89, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(138, 151, 86, 20);
+		frmLaluAcademiaDe.getContentPane().add(panel);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(111, 110, 31, 20);
+		frmLaluAcademiaDe.getContentPane().add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(152, 110, 31, 20);
+		frmLaluAcademiaDe.getContentPane().add(textField_4);
+		textField_4.setColumns(10);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(193, 110, 31, 20);
+		frmLaluAcademiaDe.getContentPane().add(textField_5);
+		textField_5.setColumns(10);
 
 		
 		

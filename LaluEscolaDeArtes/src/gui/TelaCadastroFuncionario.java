@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
+import java.awt.Cursor;
 
 public class TelaCadastroFuncionario {
 
@@ -99,11 +100,11 @@ public class TelaCadastroFuncionario {
 		textField_2.setColumns(10);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
-		lblTelefone.setBounds(10, 162, 46, 14);
+		lblTelefone.setBounds(10, 162, 64, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTelefone);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(65, 159, 101, 20);
+		textField_3.setBounds(81, 159, 101, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
@@ -127,20 +128,20 @@ public class TelaCadastroFuncionario {
 		textField_6.setColumns(10);
 		
 		JLabel lblTelefone_1 = new JLabel("Telefone 2:");
-		lblTelefone_1.setBounds(239, 162, 61, 14);
+		lblTelefone_1.setBounds(239, 162, 71, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTelefone_1);
 		
 		textField_7 = new JTextField();
-		textField_7.setBounds(301, 159, 101, 20);
+		textField_7.setBounds(308, 159, 101, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_7);
 		textField_7.setColumns(10);
 		
 		JLabel lblEmail = new JLabel("Email:");
-		lblEmail.setBounds(10, 198, 33, 14);
+		lblEmail.setBounds(10, 198, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblEmail);
 		
 		textField_8 = new JTextField();
-		textField_8.setBounds(50, 195, 172, 20);
+		textField_8.setBounds(59, 195, 163, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_8);
 		textField_8.setColumns(10);
 		
@@ -158,18 +159,20 @@ public class TelaCadastroFuncionario {
 		frmLaluAcademiaDe.getContentPane().add(lblFuno);
 		
 		textField_10 = new JTextField();
-		textField_10.setBounds(282, 195, 120, 20);
+		textField_10.setBounds(289, 195, 120, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_10);
 		textField_10.setColumns(10);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(102, 226, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnCadastrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCadastrar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnCadastrar.setBorder(new CompoundBorder());
 		btnCadastrar.setBounds(249, 226, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnCadastrar);

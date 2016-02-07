@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.border.CompoundBorder;
+import java.awt.Cursor;
 
 public class TelaInserirNota {
 
@@ -79,18 +80,20 @@ public class TelaInserirNota {
 		frmLaluAcademiaDe.getContentPane().add(lblNewLabel);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(92, 95, 101, 20);
+		textField_1.setBounds(95, 92, 101, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(170, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnConcluir = new JButton("Concluir");
-		btnConcluir.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnConcluir.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnConcluir.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnConcluir.setBounds(170, 193, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnConcluir);
 		

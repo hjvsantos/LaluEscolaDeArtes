@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.CompoundBorder;
+import java.awt.Cursor;
 
 public class TelaConsultarNota {
 
@@ -61,7 +62,8 @@ public class TelaConsultarNota {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(163, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
@@ -70,13 +72,13 @@ public class TelaConsultarNota {
 		lblNome.setBounds(20, 55, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(60, 55, 333, 14);
-		frmLaluAcademiaDe.getContentPane().add(lblNewLabel);
-		
 		JPanel panel = new JPanel();
 		panel.setBounds(45, 85, 316, 116);
 		frmLaluAcademiaDe.getContentPane().add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(60, 50, 301, 23);
+		frmLaluAcademiaDe.getContentPane().add(panel_1);
 	}
 
 }

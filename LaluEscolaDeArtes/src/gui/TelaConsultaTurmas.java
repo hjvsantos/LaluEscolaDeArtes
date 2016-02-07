@@ -14,6 +14,7 @@ import java.awt.SystemColor;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
 import javax.swing.JPanel;
+import java.awt.Cursor;
 
 public class TelaConsultaTurmas {
 
@@ -62,7 +63,8 @@ public class TelaConsultaTurmas {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(166, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);

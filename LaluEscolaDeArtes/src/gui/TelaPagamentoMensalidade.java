@@ -14,12 +14,13 @@ import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
+import java.awt.Cursor;
+import javax.swing.JComboBox;
 
 public class TelaPagamentoMensalidade {
 
 	private JFrame frmLaluAcademiaDe;
 	private JTextField textField;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -64,13 +65,15 @@ public class TelaPagamentoMensalidade {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setBorder(new CompoundBorder());
 		btnVoltar.setBounds(170, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnConfirmar = new JButton("Confirmar");
-		btnConfirmar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnConfirmar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnConfirmar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnConfirmar.setBounds(170, 186, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnConfirmar);
 		
@@ -87,21 +90,20 @@ public class TelaPagamentoMensalidade {
 		lblTurma.setBounds(290, 62, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTurma);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(327, 59, 97, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
-		
 		JLabel lblMensalidade = new JLabel("Mensalidade:");
-		lblMensalidade.setBounds(10, 105, 63, 14);
+		lblMensalidade.setBounds(10, 105, 79, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblMensalidade);
 		
 		JRadioButton rdbtnPaga = new JRadioButton("Paga");
-		rdbtnPaga.setBounds(79, 101, 109, 23);
+		rdbtnPaga.setBounds(95, 101, 109, 23);
 		frmLaluAcademiaDe.getContentPane().add(rdbtnPaga);
 		
 		JRadioButton rdbtnEmDbito = new JRadioButton("Em d\u00E9bito");
-		rdbtnEmDbito.setBounds(213, 101, 109, 23);
+		rdbtnEmDbito.setBounds(222, 101, 109, 23);
 		frmLaluAcademiaDe.getContentPane().add(rdbtnEmDbito);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(333, 59, 91, 20);
+		frmLaluAcademiaDe.getContentPane().add(comboBox);
 	}
 }

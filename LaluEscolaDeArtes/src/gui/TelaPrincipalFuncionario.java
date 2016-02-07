@@ -1,21 +1,24 @@
 package gui;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
 import java.awt.Color;
-import java.awt.Toolkit;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import java.awt.Font;
-import javax.swing.border.CompoundBorder;
 import java.awt.Cursor;
-import javax.swing.ImageIcon;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.Window.Type;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.border.CompoundBorder;
 
 public class TelaPrincipalFuncionario {
 
+	private static JFrame frame;
 	private JFrame frmLaluAcademiaDe;
 	private JTextField txtPesquisarUmAluno;
 
@@ -56,8 +59,15 @@ public class TelaPrincipalFuncionario {
 		frmLaluAcademiaDe.getContentPane().setLayout(null);
 		
 		JButton btnSair = new JButton("Sair");
+		btnSair.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.exit(0);
+				
+			}
+		});
 		btnSair.setBorder(new CompoundBorder());
-		btnSair.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnSair.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnSair.setBounds(22, 227, 60, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnSair);
 		
@@ -68,14 +78,14 @@ public class TelaPrincipalFuncionario {
 		
 		JButton btnPesquisar = new JButton("Pesquisar");
 		btnPesquisar.setSelectedIcon(new ImageIcon(TelaPrincipalFuncionario.class.getResource("/com/sun/javafx/scene/control/skin/caspian/images/vk-light-pressed.png")));
-		btnPesquisar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnPesquisar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnPesquisar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnPesquisar.setBorder(new CompoundBorder());
 		btnPesquisar.setBounds(335, 65, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnPesquisar);
 		
 		JButton btnMatricular = new JButton("Matricular");
-		btnMatricular.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnMatricular.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnMatricular.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnMatricular.setBorder(new CompoundBorder());
 		btnMatricular.setBounds(22, 118, 89, 23);
@@ -88,16 +98,21 @@ public class TelaPrincipalFuncionario {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JButton btnTurmas = new JButton("Turmas");
-		btnTurmas.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnTurmas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnTurmas.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnTurmas.setBorder(new CompoundBorder());
 		btnTurmas.setBounds(178, 118, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnTurmas);
 		
 		JButton btnNewButton = new JButton("Notas");
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton.setBorder(new CompoundBorder());
-		btnNewButton.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		btnNewButton.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnNewButton.setBounds(335, 119, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnNewButton);
 	}
 
-}
+	
+	}
+
+
