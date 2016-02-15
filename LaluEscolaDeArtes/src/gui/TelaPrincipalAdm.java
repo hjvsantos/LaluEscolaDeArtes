@@ -85,7 +85,7 @@ public class TelaPrincipalAdm {
 		btnMatricular.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnMatricular.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnMatricular.setBorder(new CompoundBorder());
-		btnMatricular.setBounds(916, 271, 89, 23);
+		btnMatricular.setBounds(731, 271, 104, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnMatricular);
 		
 		JLabel lblLaluAcademiaDe = new JLabel("Lalu Academia de Artes");
@@ -98,7 +98,7 @@ public class TelaPrincipalAdm {
 		btnTurmas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnTurmas.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnTurmas.setBorder(new CompoundBorder());
-		btnTurmas.setBounds(638, 271, 89, 23);
+		btnTurmas.setBounds(529, 271, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnTurmas);
 		
 		JButton btnNewButton = new JButton("Notas");
@@ -117,7 +117,7 @@ public class TelaPrincipalAdm {
 		btnFuncionrio.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnFuncionrio.setBorder(new CompoundBorder());
 		btnFuncionrio.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
-		btnFuncionrio.setBounds(638, 342, 89, 23);
+		btnFuncionrio.setBounds(529, 342, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnFuncionrio);
 		
 		JButton btnFinanceiro = new JButton("Financeiro");
@@ -141,7 +141,31 @@ public class TelaPrincipalAdm {
 		frmLaluAcademiaDe.getContentPane().add(lblAppUniverse);
 		
 		JButton btnNovaTurma = new JButton("Nova Turma");
-		btnNovaTurma.setBounds(916, 343, 104, 23);
+		btnNovaTurma.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
+		btnNovaTurma.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNovaTurma.setBorder(new CompoundBorder());
+		btnNovaTurma.setBounds(731, 343, 104, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnNovaTurma);
+		
+		JButton btnNovoAdm = new JButton("Novo Adm");
+		btnNovoAdm.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
+		btnNovoAdm.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNovoAdm.setBorder(new CompoundBorder());
+		btnNovoAdm.setBounds(960, 272, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnNovoAdm);
+		
+		JButton btnNovoUsu = new JButton("Novo Usu.");
+		btnNovoUsu.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
+		btnNovoUsu.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNovoUsu.setBorder(new CompoundBorder());
+		btnNovoUsu.setBounds(960, 343, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnNovoUsu);
+		
+		JButton btnExcluirUsu = new JButton("Excluir Usu.");
+		btnExcluirUsu.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
+		btnExcluirUsu.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnExcluirUsu.setBorder(new CompoundBorder());
+		btnExcluirUsu.setBounds(1101, 312, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnExcluirUsu);
 	}
 }

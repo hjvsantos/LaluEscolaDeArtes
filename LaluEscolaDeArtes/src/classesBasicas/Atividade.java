@@ -4,16 +4,16 @@ public class Atividade {
 	
 	public String nome;
 	public int quantidadeAlunos;
-	public String tipo;
+	public String categoria;
 	public double preco;
 	public double duracao;
 	
-	public Atividade(String nome, int quantidadeAlunos, String tipo,
+	public Atividade(String nome, int quantidadeAlunos, String categoria,
 			double preco, double duracao) {
 		
 		this.nome = nome;
 		this.quantidadeAlunos = quantidadeAlunos;
-		this.tipo = tipo;
+		this.categoria = categoria;
 		this.preco = preco;
 		this.duracao = duracao;
 	}
@@ -34,12 +34,12 @@ public class Atividade {
 		this.quantidadeAlunos = quantidadeAlunos;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getCategoria() {
+		return categoria;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 
 	public double getPreco() {

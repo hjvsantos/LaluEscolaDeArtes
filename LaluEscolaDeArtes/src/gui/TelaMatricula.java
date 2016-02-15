@@ -15,6 +15,10 @@ import java.awt.Toolkit;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
+import javax.swing.JFormattedTextField;  
+import javax.swing.text.MaskFormatter;
+import java.text.ParseException;
+import java.awt.FlowLayout;
 
 import java.awt.Cursor;
 
@@ -22,17 +26,15 @@ public class TelaMatricula {
 
 	private JFrame frmLaluAcademiaDe;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JFormattedTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
+	private JFormattedTextField textField_5;
 	private JTextField textField_6;
 	private JTextField textField_7;
 	private JTextField textField_8;
 	private JTextField textField_9;
 	private JTextField textField_10;
-	private JTextField textField_11;
+	private JFormattedTextField textField_11;
 	private JTextField textField_12;
 	private JTextField textField_13;
 	private JTextField textField_14;
@@ -41,6 +43,9 @@ public class TelaMatricula {
 	private JTextField textField_17;
 	private JTextField textField_18;
 	private JTextField textField_19;
+	private JFormattedTextField data;
+	private MaskFormatter ftmData;
+	
 
 	/**
 	 * Launch the application.
@@ -79,7 +84,7 @@ public class TelaMatricula {
 		frmLaluAcademiaDe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLaluAcademiaDe.getContentPane().setLayout(null);
 		//frmLaluAcademiaDe.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		
+		 
 		
 		JLabel lblLaluAcademiaDe = new JLabel("Lalu Academia de Artes");
 		lblLaluAcademiaDe.setFocusable(false);
@@ -100,34 +105,28 @@ public class TelaMatricula {
 		lblDataDeNascimento.setBounds(382, 220, 99, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblDataDeNascimento);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(500, 218, 24, 17);
+		
+		try {
+		ftmData = new MaskFormatter("##/##/####");
+		} catch (ParseException e) {
+		e.printStackTrace(); 
+		}
+		textField_1 = new JFormattedTextField(ftmData);
+		textField_1.setBounds(500, 218, 112, 17);
 		frmLaluAcademiaDe.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
-		
-		JLabel label = new JLabel("/");
-		label.setBounds(534, 220, 10, 14);
-		frmLaluAcademiaDe.getContentPane().add(label);
-		
-		textField_3 = new JTextField();
-		textField_3.setBounds(547, 218, 24, 17);
-		frmLaluAcademiaDe.getContentPane().add(textField_3);
-		textField_3.setColumns(10);
-		
-		JLabel label_1 = new JLabel("/");
-		label_1.setBounds(581, 214, 10, 26);
-		frmLaluAcademiaDe.getContentPane().add(label_1);
-		
-		textField_4 = new JTextField();
-		textField_4.setBounds(599, 218, 38, 17);
-		frmLaluAcademiaDe.getContentPane().add(textField_4);
-		textField_4.setColumns(10);
 		
 		JLabel lblCpf = new JLabel("CPF:");
 		lblCpf.setBounds(928, 163, 35, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblCpf);
 		
-		textField_5 = new JTextField();
+		
+		try {
+			ftmData = new MaskFormatter("###.###.###-##");
+			} catch (ParseException e) {
+			e.printStackTrace(); 
+			}
+		textField_5 = new JFormattedTextField(ftmData);
 		textField_5.setBounds(973, 160, 148, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_5);
 		textField_5.setColumns(10);
@@ -181,7 +180,12 @@ public class TelaMatricula {
 		lblRg.setBounds(139, 220, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblRg);
 		
-		textField_11 = new JTextField();
+		try {
+			ftmData = new MaskFormatter("#.###.###");
+			} catch (ParseException e) {
+			e.printStackTrace(); 
+			}
+		textField_11 = new JFormattedTextField(ftmData);
 		textField_11.setBounds(198, 217, 148, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_11);
 		textField_11.setColumns(10);
@@ -303,4 +307,22 @@ public class TelaMatricula {
 		
 	}
 
+/*	public void TextFieldComMascara() throws ParseException{  
+		  
+	      ftmData = new MaskFormatter("##/##/####");  
+	          
+	      data = new JFormattedTextField(ftmData);  
+	   
+	      ftmData.setValidCharacters("0123456789");  
+	 
+	      data.setColumns(6);  
+	   
+	      add(data);  
+	        
+	      setLayout(new FlowLayout());  
+	      setDefaultCloseOperation(DISPOSE_ON_CLOSE);  
+	      setSize(200, 200);  
+	      setVisible(true);  
+	  } 
+	*/
 }

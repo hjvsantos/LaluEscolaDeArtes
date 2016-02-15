@@ -11,20 +11,22 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.Window.Type;
 import java.awt.Toolkit;
 import java.awt.Cursor;
+import java.text.ParseException;
+
 import javax.swing.JPanel;
+import javax.swing.JFormattedTextField;
 
 public class TelaConsultaAluno {
 
 	private JFrame frmLaluAcademiaDe;
-	private JTextField textField;
-	private JTextField textField_1;
 	private JTextField textField_3;
-	private JTextField textField_2;
-	private JTextField textField_4;
-	private JTextField textField_5;
+	private JFormattedTextField textField_2;
+	private MaskFormatter ftmData;
 
 	/**
 	 * Launch the application.
@@ -73,19 +75,9 @@ public class TelaConsultaAluno {
 		lblNome.setBounds(22, 71, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
-		textField = new JTextField();
-		textField.setBounds(61, 68, 212, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField);
-		textField.setColumns(10);
-		
 		JLabel lblTurma = new JLabel("Turma:");
 		lblTurma.setBounds(280, 71, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTurma);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(326, 68, 86, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
 		
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -102,12 +94,12 @@ public class TelaConsultaAluno {
 		btnAtualizar.setBounds(169, 227, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnAtualizar);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		JButton btnCancelar = new JButton("Cancelamento");
 		btnCancelar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnCancelar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnVoltar.setFont(new Font("Century Gothic", Font.PLAIN, 11));
 		btnVoltar.setBorder(new CompoundBorder());
-		btnCancelar.setBounds(291, 227, 89, 23);
+		btnCancelar.setBounds(291, 227, 118, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnCancelar);
 		
 		JLabel lblFimDoContrato = new JLabel("Fim do Contrato:");
@@ -137,20 +129,23 @@ public class TelaConsultaAluno {
 		panel.setBounds(138, 151, 86, 20);
 		frmLaluAcademiaDe.getContentPane().add(panel);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(111, 110, 31, 20);
+		try {
+			ftmData = new MaskFormatter("##/##/####");
+			} catch (ParseException e) {
+			e.printStackTrace(); 
+			}
+		textField_2 = new JFormattedTextField(ftmData);
+		textField_2.setBounds(111, 110, 97, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(152, 110, 31, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_4);
-		textField_4.setColumns(10);
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(66, 65, 185, 20);
+		frmLaluAcademiaDe.getContentPane().add(panel_1);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(193, 110, 31, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_5);
-		textField_5.setColumns(10);
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(322, 62, 102, 23);
+		frmLaluAcademiaDe.getContentPane().add(panel_2);
 
 		
 		

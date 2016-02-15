@@ -14,10 +14,17 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
+import javax.swing.text.MaskFormatter;
 
 import java.awt.Cursor;
+import java.text.ParseException;
+import javax.swing.JFormattedTextField;  
+import javax.swing.text.MaskFormatter;
+import java.text.ParseException;
+import java.awt.FlowLayout;
 
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 
 public class TelaCadastroFuncionario {
 
@@ -25,11 +32,9 @@ public class TelaCadastroFuncionario {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
+	private JFormattedTextField textField_3;
+	private JFormattedTextField textField_5;
+	private JFormattedTextField textField_7;
 	private JTextField textField_8;
 	private JTextField textField_9;
 	private JTextField textField_10;
@@ -44,6 +49,7 @@ public class TelaCadastroFuncionario {
 	private JLabel lblNmero;
 	private JTextField textField_15;
 	private JLabel lblEstado;
+	private MaskFormatter ftmData;
 
 	/**
 	 * Launch the application.
@@ -119,7 +125,12 @@ public class TelaCadastroFuncionario {
 		lblTelefone.setBounds(218, 240, 64, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTelefone);
 		
-		textField_3 = new JTextField();
+		try {
+			ftmData = new MaskFormatter("###.###.###-##");
+			} catch (ParseException e) {
+			e.printStackTrace(); 
+			}
+		textField_3 = new JFormattedTextField(ftmData);
 		textField_3.setBounds(925, 131, 101, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
@@ -128,26 +139,28 @@ public class TelaCadastroFuncionario {
 		lblDDeNascimento.setBounds(392, 184, 95, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblDDeNascimento);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(571, 181, 33, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_4);
-		textField_4.setColumns(10);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(485, 181, 33, 20);
+		MaskFormatter ftmData = null;
+		try {
+			ftmData = new MaskFormatter("##/##/####");
+			} catch (ParseException e) {
+			e.printStackTrace(); 
+			}
+		textField_5 = new JFormattedTextField(ftmData);
+		textField_5.setBounds(485, 181, 120, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_5);
 		textField_5.setColumns(10);
-		
-		textField_6 = new JTextField();
-		textField_6.setBounds(528, 181, 33, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_6);
-		textField_6.setColumns(10);
 		
 		JLabel lblTelefone_1 = new JLabel("Telefone 2:");
 		lblTelefone_1.setBounds(458, 240, 71, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTelefone_1);
 		
-		textField_7 = new JTextField();
+		
+		try {
+			ftmData = new MaskFormatter("#.###.###");
+			} catch (ParseException e) {
+			e.printStackTrace(); 
+			}
+		textField_7 = new JFormattedTextField(ftmData);
 		textField_7.setBounds(261, 181, 101, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_7);
 		textField_7.setColumns(10);
