@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Aluno {
 	public String nome;
-	public String endereco;
+	public Endereco endereco;
 	public String nomeResponsavel;
 	private String CPF;
 	private String CPFresponsavel;
@@ -16,7 +16,7 @@ public class Aluno {
 	public Matricula matricula;
 	public double valormensalidade;
 	
-	public Aluno(String nome, String endereco, String nomeResponsavel,
+	public Aluno(String nome, Endereco endereco, String nomeResponsavel,
 			String cPF, String cPFresponsavel, String rG, String email,
 			Date dataNascimento, double telefone, Date dataPagamento,
 			Matricula matricula, double valormensalidade) {
@@ -35,7 +35,6 @@ public class Aluno {
 		this.valormensalidade = valormensalidade;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
@@ -44,11 +43,11 @@ public class Aluno {
 		this.nome = nome;
 	}
 
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
 

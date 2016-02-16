@@ -6,9 +6,6 @@ public class Administrador {
 	public String CPF;
 	public String login;
 	public String senha;
-	public Funcionario funcionario;
-	public String turma; //turma vai ser determinada pelo adm pois informará o funcionario, horario e dia que acontecerá 
-	
 	
 
 
@@ -18,8 +15,6 @@ public class Administrador {
 		CPF = cPF;
 		this.login = login;
 		this.senha = senha;
-		this.funcionario = funcionario;
-		this.turma = turma;
 	}
 
 	public String getNome() {
@@ -52,23 +47,6 @@ public class Administrador {
 	
 	public String getCPF() {
 		return CPF;
-	}
-	
-
-	public Funcionario getFuncionario() {
-		return funcionario;
-	}
-
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
-	}
-
-	public String getTurma() {
-		return turma;
-	}
-
-	public void setTurma(String turma) {
-		this.turma = turma;
 	}
 	
 }

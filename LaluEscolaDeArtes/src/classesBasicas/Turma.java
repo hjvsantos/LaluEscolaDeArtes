@@ -6,10 +6,10 @@ public class Turma {
 	public int limiteMax;
 	public int limiteMin;
 	public Atividade atividade;
-	public String codigo;
+	public int codigo;
 	
 	public Turma(Funcionario professor, int limiteMax, int limiteMin,
-			Atividade atividade, String codigo) {
+			Atividade atividade, int codigo) {
 		
 		this.professor = professor;
 		this.limiteMax = limiteMax;
@@ -50,11 +50,11 @@ public class Turma {
 		this.atividade = atividade;
 	}
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 	
