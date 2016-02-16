@@ -12,8 +12,7 @@ public class Administrador {
 	
 
 
-	public Administrador(String nome, String cPF, String login, String senha,
-			Funcionario funcionario, String turma) {
+	public Administrador(String nome, String cPF, String login, String senha) {
 		super();
 		this.nome = nome;
 		CPF = cPF;
@@ -49,6 +48,10 @@ public class Administrador {
 
 	public void setCPF(String cPF) {
 		CPF = cPF;
+	}
+	
+	public String getCPF() {
+		return CPF;
 	}
 	
 

@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
+import java.awt.Window;
 import java.awt.Window.Type;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -11,6 +12,7 @@ import java.awt.Color;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
@@ -18,13 +20,18 @@ import javax.swing.text.MaskFormatter;
 
 import java.awt.Cursor;
 import java.text.ParseException;
+
 import javax.swing.JFormattedTextField;  
 import javax.swing.text.MaskFormatter;
+
 import java.text.ParseException;
 import java.awt.FlowLayout;
 
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaCadastroFuncionario {
 
@@ -50,6 +57,8 @@ public class TelaCadastroFuncionario {
 	private JTextField textField_15;
 	private JLabel lblEstado;
 	private MaskFormatter ftmData;
+	private JLabel lblComplemento;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -216,11 +225,11 @@ public class TelaCadastroFuncionario {
 		textField_11.setColumns(10);
 		
 		lblCep = new JLabel("CEP:");
-		lblCep.setBounds(756, 327, 33, 50);
+		lblCep.setBounds(736, 327, 33, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblCep);
 		
 		textField_12 = new JTextField();
-		textField_12.setBounds(790, 342, 126, 20);
+		textField_12.setBounds(766, 342, 126, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_12);
 		textField_12.setColumns(10);
 		
@@ -234,20 +243,20 @@ public class TelaCadastroFuncionario {
 		textField_13.setColumns(10);
 		
 		lblBairro = new JLabel("Bairro:");
-		lblBairro.setBounds(439, 383, 56, 50);
+		lblBairro.setBounds(902, 327, 56, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblBairro);
 		
 		textField_14 = new JTextField();
-		textField_14.setBounds(485, 398, 113, 20);
+		textField_14.setBounds(944, 342, 113, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_14);
 		textField_14.setColumns(10);
 		
 		lblNmero = new JLabel("N\u00FAmero:");
-		lblNmero.setBounds(627, 383, 46, 50);
+		lblNmero.setBounds(419, 383, 46, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblNmero);
 		
 		textField_15 = new JTextField();
-		textField_15.setBounds(681, 398, 86, 20);
+		textField_15.setBounds(469, 398, 86, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_15);
 		textField_15.setColumns(10);
 		
@@ -259,5 +268,16 @@ public class TelaCadastroFuncionario {
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santos", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Pualo", "Sergipe", "Tocatins"}));
 		comboBox.setBounds(838, 398, 165, 20);
 		frmLaluAcademiaDe.getContentPane().add(comboBox);
+		
+		lblComplemento = new JLabel("Complemento:");
+		lblComplemento.setBounds(579, 390, 86, 37);
+		frmLaluAcademiaDe.getContentPane().add(lblComplemento);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(665, 397, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(textField_4);
+		textField_4.setColumns(10);
+		
 	}
+
 }

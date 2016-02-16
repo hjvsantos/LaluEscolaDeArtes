@@ -45,6 +45,7 @@ public class TelaMatricula {
 	private JTextField textField_19;
 	private JFormattedTextField data;
 	private MaskFormatter ftmData;
+	private JTextField textField_3;
 	
 
 	/**
@@ -296,13 +297,22 @@ public class TelaMatricula {
 		textField_19.setColumns(10);
 		
 		JLabel lblEstado = new JLabel("Estado:");
-		lblEstado.setBounds(681, 300, 51, 50);
+		lblEstado.setBounds(892, 297, 51, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblEstado);
 		
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santos", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Pualo", "Sergipe", "Tocatins"}));
-		comboBox_2.setBounds(728, 312, 165, 20);
+		comboBox_2.setBounds(956, 312, 165, 20);
 		frmLaluAcademiaDe.getContentPane().add(comboBox_2);
+		
+		JLabel lblComplemento = new JLabel("Complemento:");
+		lblComplemento.setBounds(675, 300, 79, 50);
+		frmLaluAcademiaDe.getContentPane().add(lblComplemento);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(755, 310, 79, 24);
+		frmLaluAcademiaDe.getContentPane().add(textField_3);
+		textField_3.setColumns(10);
 		
 		
 	}

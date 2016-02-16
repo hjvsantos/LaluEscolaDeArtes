@@ -6,17 +6,18 @@ public class Funcionario {
 	
 	public String nome;
 	private String CPF;
-	private double rg;
+	private String rg;
 	public Date dataNascimento;
 	public double telefone;
 	public String endereço;
 	public String funcao;
 	public String matricula;
 	public double salario;
+	public String email;
 	
-	public Funcionario(String nome, String cPF, double rg, Date dataNascimento,
+	public Funcionario(String nome, String cPF, String rg, Date dataNascimento,
 			double telefone, String endereço, String funcao, String matricula,
-			double salario) {
+			double salario, String email) {
 	
 		this.nome = nome;
 		CPF = cPF;
@@ -27,7 +28,22 @@ public class Funcionario {
 		this.funcao = funcao;
 		this.matricula = matricula;
 		this.salario = salario;
+		this.email= email;
 	}
+	
+	
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
 
 	public String getNome() {
 		return nome;
@@ -45,11 +61,11 @@ public class Funcionario {
 		CPF = cPF;
 	}
 
-	public double getRg() {
+	public String getRg() {
 		return rg;
 	}
 
-	public void setRg(double rg) {
+	public void setRg(String rg) {
 		this.rg = rg;
 	}
 
