@@ -90,6 +90,7 @@ public class TelaEdicaoFuncionario {
 		frmLaluAcademiaDe.getContentPane().add(btnConcluir);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNome.setBounds(288, 125, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
@@ -99,6 +100,7 @@ public class TelaEdicaoFuncionario {
 		textField.setColumns(10);
 		
 		JLabel lblCpf = new JLabel("CPF:");
+		lblCpf.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblCpf.setBounds(1001, 125, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblCpf);
 		
@@ -108,11 +110,12 @@ public class TelaEdicaoFuncionario {
 			e.printStackTrace(); 
 			}
 		JFormattedTextField textField_1 = new JFormattedTextField(ftmData);
-		textField_1.setBounds(1038, 119, 132, 20);
+		textField_1.setBounds(1038, 123, 132, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblRg = new JLabel("RG:");
+		lblRg.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblRg.setBounds(517, 180, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblRg);
 		
@@ -127,6 +130,7 @@ public class TelaEdicaoFuncionario {
 		textField_2.setColumns(10);
 		
 		JLabel lblTelefone = new JLabel("Telefone:");
+		lblTelefone.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblTelefone.setBounds(663, 180, 61, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTelefone);
 		
@@ -136,8 +140,8 @@ public class TelaEdicaoFuncionario {
 		textField_3.setColumns(10);
 		
 		JLabel lblDDeNascimento = new JLabel("D. de nascimento:");
-		lblDDeNascimento.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblDDeNascimento.setBounds(288, 180, 101, 14);
+		lblDDeNascimento.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblDDeNascimento.setBounds(269, 180, 120, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblDDeNascimento);
 		
 		try {
@@ -151,6 +155,7 @@ public class TelaEdicaoFuncionario {
 		textField_4.setColumns(10);
 		
 		JLabel lblTelefone_1 = new JLabel("Telefone 2:");
+		lblTelefone_1.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblTelefone_1.setBounds(865, 180, 89, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTelefone_1);
 		
@@ -165,25 +170,29 @@ public class TelaEdicaoFuncionario {
 		textField_7.setColumns(10);
 		
 		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblEmail.setBounds(344, 235, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblEmail);
 		
 		JTextField textField_8 = new JTextField();
+		textField_8.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		textField_8.setBounds(391, 232, 172, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_8);
 		textField_8.setColumns(10);
 		
 		JLabel lblSalrio = new JLabel("Sal\u00E1rio:");
-		lblSalrio.setBounds(607, 235, 46, 14);
+		lblSalrio.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblSalrio.setBounds(599, 235, 54, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblSalrio);
 		
 		JTextField textField_9 = new JTextField();
-		textField_9.setBounds(929, 177, 120, 20);
+		textField_9.setBounds(939, 178, 120, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_9);
 		textField_9.setColumns(10);
 		
 		JLabel lblFuno = new JLabel("Fun\u00E7\u00E3o:");
-		lblFuno.setBounds(870, 235, 46, 14);
+		lblFuno.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblFuno.setBounds(865, 235, 51, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblFuno);
 		
 		JTextField textField_10 = new JTextField();
@@ -192,7 +201,8 @@ public class TelaEdicaoFuncionario {
 		textField_10.setColumns(10);
 		
 		JLabel lblEndereo = new JLabel("Endere\u00E7o:");
-		lblEndereo.setBounds(288, 273, 61, 43);
+		lblEndereo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblEndereo.setBounds(269, 273, 75, 43);
 		frmLaluAcademiaDe.getContentPane().add(lblEndereo);
 		
 		textField_5 = new JTextField();
@@ -201,6 +211,7 @@ public class TelaEdicaoFuncionario {
 		textField_5.setColumns(10);
 		
 		JLabel lblCep = new JLabel("CEP:");
+		lblCep.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblCep.setBounds(906, 277, 37, 34);
 		frmLaluAcademiaDe.getContentPane().add(lblCep);
 		
@@ -210,6 +221,7 @@ public class TelaEdicaoFuncionario {
 		textField_6.setColumns(10);
 		
 		JLabel lblCidade = new JLabel("Cidade:");
+		lblCidade.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblCidade.setBounds(288, 327, 46, 43);
 		frmLaluAcademiaDe.getContentPane().add(lblCidade);
 		
@@ -219,6 +231,7 @@ public class TelaEdicaoFuncionario {
 		textField_13.setColumns(10);
 		
 		JLabel lblBairro = new JLabel("Bairro:");
+		lblBairro.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblBairro.setBounds(496, 323, 46, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblBairro);
 		
@@ -228,15 +241,17 @@ public class TelaEdicaoFuncionario {
 		textField_14.setColumns(10);
 		
 		JLabel lblNmero = new JLabel("N\u00FAmero:");
-		lblNmero.setBounds(678, 323, 46, 50);
+		lblNmero.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblNmero.setBounds(663, 323, 54, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblNmero);
 		
 		JTextField textField_15 = new JTextField();
-		textField_15.setBounds(721, 338, 86, 20);
+		textField_15.setBounds(721, 339, 86, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_15);
 		textField_15.setColumns(10);
 		
 		JLabel lblEstado = new JLabel("Estado:");
+		lblEstado.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblEstado.setBounds(827, 323, 46, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblEstado);
 		

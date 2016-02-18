@@ -67,15 +67,17 @@ public class TelaCriarAdm {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNome.setBounds(146, 170, 64, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
 		textField = new JTextField();
-		textField.setBounds(199, 182, 537, 26);
+		textField.setBounds(199, 182, 570, 26);
 		frmLaluAcademiaDe.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblCpf = new JLabel("CPF:");
+		lblCpf.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblCpf.setBounds(927, 170, 45, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblCpf);
 		
@@ -85,7 +87,8 @@ public class TelaCriarAdm {
 		textField_1.setColumns(10);
 		
 		JLabel lblNovoLogin = new JLabel("Novo Login:");
-		lblNovoLogin.setBounds(479, 279, 76, 50);
+		lblNovoLogin.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblNovoLogin.setBounds(460, 278, 76, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblNovoLogin);
 		
 		textField_2 = new JTextField();
@@ -94,6 +97,7 @@ public class TelaCriarAdm {
 		textField_2.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblSenha.setBounds(479, 335, 50, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblSenha);
 		
@@ -102,6 +106,7 @@ public class TelaCriarAdm {
 		frmLaluAcademiaDe.getContentPane().add(passwordField);
 		
 		JLabel lblSenha_1 = new JLabel("Senha:");
+		lblSenha_1.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblSenha_1.setBounds(479, 392, 45, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblSenha_1);
 		

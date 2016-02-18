@@ -69,6 +69,7 @@ public class TelaInserirNota {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNome.setBounds(261, 164, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
@@ -78,7 +79,8 @@ public class TelaInserirNota {
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("N\u00BA da Matr\u00EDcula:");
-		lblNewLabel.setBounds(777, 661, 89, 14);
+		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblNewLabel.setBounds(765, 661, 101, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNewLabel);
 		
 		textField_1 = new JTextField();
@@ -100,6 +102,7 @@ public class TelaInserirNota {
 		frmLaluAcademiaDe.getContentPane().add(btnConcluir);
 		
 		JLabel lblNota = new JLabel("Nota:");
+		lblNota.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNota.setBounds(295, 661, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNota);
 		
@@ -109,6 +112,7 @@ public class TelaInserirNota {
 		textField_3.setColumns(10);
 		
 		JLabel lblTurma = new JLabel("Turma:");
+		lblTurma.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblTurma.setBounds(486, 661, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTurma);
 		
@@ -117,6 +121,8 @@ public class TelaInserirNota {
 		frmLaluAcademiaDe.getContentPane().add(comboBox);
 		
 		JButton btnInserir = new JButton("Inserir");
+		btnInserir.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnInserir.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnInserir.setBounds(653, 798, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnInserir);
 		
@@ -129,6 +135,7 @@ public class TelaInserirNota {
 		frmLaluAcademiaDe.getContentPane().add(btnBuscar);
 		
 		JLabel lblCdigo = new JLabel("C\u00F3digo:");
+		lblCdigo.setFont(new Font("Verdana", Font.PLAIN, 12));
 		lblCdigo.setBounds(1026, 657, 53, 23);
 		frmLaluAcademiaDe.getContentPane().add(lblCdigo);
 		

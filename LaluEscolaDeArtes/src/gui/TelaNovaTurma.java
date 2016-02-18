@@ -87,6 +87,7 @@ public class TelaNovaTurma {
 		frmLaluAcademiaDe.getContentPane().add(btnConfirmar);
 		
 		JLabel lblProfessor = new JLabel("Professor:");
+		lblProfessor.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblProfessor.setBounds(165, 153, 63, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblProfessor);
 		
@@ -95,7 +96,8 @@ public class TelaNovaTurma {
 		frmLaluAcademiaDe.getContentPane().add(comboBox);
 		
 		JLabel lblAtividade = new JLabel("Atividade:");
-		lblAtividade.setBounds(472, 153, 57, 50);
+		lblAtividade.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblAtividade.setBounds(460, 153, 69, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblAtividade);
 		
 		JComboBox comboBox_1 = new JComboBox();
@@ -103,7 +105,8 @@ public class TelaNovaTurma {
 		frmLaluAcademiaDe.getContentPane().add(comboBox_1);
 		
 		JLabel lblHorrio = new JLabel("Hor\u00E1rio In\u00EDcio:");
-		lblHorrio.setBounds(248, 237, 76, 50);
+		lblHorrio.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblHorrio.setBounds(229, 237, 95, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblHorrio);
 		
 		try {
@@ -117,7 +120,8 @@ public class TelaNovaTurma {
 		textField.setColumns(10);
 		
 		JLabel lblHorrioFinal = new JLabel("Hor\u00E1rio final:");
-		lblHorrioFinal.setBounds(510, 237, 69, 50);
+		lblHorrioFinal.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblHorrioFinal.setBounds(493, 237, 86, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblHorrioFinal);
 		
 		try {
@@ -131,24 +135,27 @@ public class TelaNovaTurma {
 		textField_1.setColumns(10);
 		
 		JLabel lblLimMnimo = new JLabel("Lim. M\u00EDnimo:");
-		lblLimMnimo.setBounds(753, 153, 63, 50);
+		lblLimMnimo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblLimMnimo.setBounds(753, 153, 89, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblLimMnimo);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(818, 168, 45, 20);
+		textField_2.setBounds(840, 169, 45, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
 		JLabel lblLimMximo = new JLabel("Lim. M\u00E1ximo:");
-		lblLimMximo.setBounds(906, 153, 76, 50);
+		lblLimMximo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblLimMximo.setBounds(918, 154, 89, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblLimMximo);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(980, 168, 45, 20);
+		textField_3.setBounds(1007, 169, 45, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
 		JLabel lblDia = new JLabel("Dia:");
+		lblDia.setFont(new Font("Verdana", Font.PLAIN, 12));
 		lblDia.setBounds(718, 237, 33, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblDia);
 		
@@ -158,6 +165,7 @@ public class TelaNovaTurma {
 		frmLaluAcademiaDe.getContentPane().add(comboBox_2);
 		
 		JLabel lblDia_1 = new JLabel("Dia:");
+		lblDia_1.setFont(new Font("Verdana", Font.PLAIN, 12));
 		lblDia_1.setBounds(718, 298, 33, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblDia_1);
 		
@@ -171,11 +179,13 @@ public class TelaNovaTurma {
 		frmLaluAcademiaDe.getContentPane().add(btnNovoHorrio);
 		
 		JLabel lblHorrioIncio = new JLabel("Hor\u00E1rio In\u00EDcio:");
-		lblHorrioIncio.setBounds(248, 298, 76, 50);
+		lblHorrioIncio.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblHorrioIncio.setBounds(229, 298, 95, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblHorrioIncio);
 		
 		JLabel lblHorrioFinal_1 = new JLabel("Hor\u00E1rio Final:");
-		lblHorrioFinal_1.setBounds(510, 298, 69, 50);
+		lblHorrioFinal_1.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblHorrioFinal_1.setBounds(493, 298, 86, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblHorrioFinal_1);
 		
 		try {

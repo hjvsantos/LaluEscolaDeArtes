@@ -11,12 +11,13 @@ import java.awt.Window.Type;
 import java.awt.Toolkit;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import java.awt.Cursor;
 
 public class TelaNovaAtividade {
 
 	private JFrame frmLaluAcademiaDe;
 	private JTextField textField;
-	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
 
@@ -64,6 +65,7 @@ public class TelaNovaAtividade {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNome.setBounds(256, 144, 48, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
@@ -73,16 +75,14 @@ public class TelaNovaAtividade {
 		textField.setColumns(10);
 		
 		JLabel lblDescrio = new JLabel("Categoria:");
+		lblDescrio.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblDescrio.setBounds(254, 248, 64, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblDescrio);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(314, 263, 243, 20);
-		frmLaluAcademiaDe.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
-		
 		JLabel lblDuraoTotal = new JLabel("Dura\u00E7\u00E3o Total:");
-		lblDuraoTotal.setBounds(890, 144, 78, 50);
+		lblDuraoTotal.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblNome.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblDuraoTotal.setBounds(869, 144, 99, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblDuraoTotal);
 		
 		textField_2 = new JTextField();
@@ -91,7 +91,8 @@ public class TelaNovaAtividade {
 		textField_2.setColumns(10);
 		
 		JLabel lblPreo = new JLabel("Pre\u00E7o:");
-		lblPreo.setBounds(930, 248, 38, 50);
+		lblPreo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblPreo.setBounds(920, 248, 48, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblPreo);
 		
 		textField_3 = new JTextField();
@@ -100,12 +101,20 @@ public class TelaNovaAtividade {
 		textField_3.setColumns(10);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setBounds(666, 547, 89, 23);
+		btnCadastrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCadastrar.setFont(new Font("Verdana", Font.PLAIN, 12));
+		btnCadastrar.setBounds(666, 547, 99, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnCadastrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(666, 604, 89, 23);
+		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnVoltar.setFont(new Font("Verdana", Font.PLAIN, 12));
+		btnVoltar.setBounds(666, 604, 99, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(314, 263, 239, 20);
+		frmLaluAcademiaDe.getContentPane().add(comboBox);
 	}
 
 }

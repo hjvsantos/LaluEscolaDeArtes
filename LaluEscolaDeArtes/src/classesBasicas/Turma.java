@@ -1,12 +1,14 @@
 package classesBasicas;
 
+import classesBasicas.Atividade;
+import classesBasicas.Funcionario;
+
 public class Turma {
-	
-	public Funcionario professor;
-	public int limiteMax;
-	public int limiteMin;
-	public Atividade atividade;
-	public int codigo;
+	private Funcionario professor;
+	private int limiteMax;
+	private int limiteMin;
+	private Atividade atividade;
+	private int codigo;
 	
 	public Turma(Funcionario professor, int limiteMax, int limiteMin,
 			Atividade atividade, int codigo) {

@@ -5,25 +5,25 @@ import classesBasicas.Endereco;
 import java.util.Date;
 
 public class Funcionario {
-	
+
 	public String nome;
 	private String CPF;
 	private String rg;
-	public Date dataNascimento;
-	public String telefone;
-	public String funcao;
-	public String matricula;
-	public double salario;
-	public String celular;
-	public String celular1;
-	public String email;
-	public Endereco endereco;
-	
+	private Date dataNascimento;
+	private String telefone;
+	private String funcao;
+	private String matricula;
+	private double salario;
+	private String celular;
+	private String celular1;
+	private String email;
+	private Endereco endereco;
+	private String login;
+	private String senha;
 	
 	public Funcionario(String nome, String cPF, String rg, Date dataNascimento,
 			String telefone, String funcao, String matricula, double salario,
-			String celular, String celular1, String email,
-			classesBasicas.Endereco endereco) {
+			String celular, String celular1, String email, Endereco endereco,String login,String senha) {
 		this.nome = nome;
 		CPF = cPF;
 		this.rg = rg;
@@ -36,6 +36,8 @@ public class Funcionario {
 		this.celular1 = celular1;
 		this.email = email;
 		this.endereco = endereco;
+		this.login = login;
+		this.senha = senha;
 	}
 
 
@@ -157,9 +159,25 @@ public class Funcionario {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	
-		
-	
+
+
+	public String getLogin() {
+		return login;
+	}
+
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+
+	public String getSenha() {
+		return senha;
+	}
+
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 	
 }

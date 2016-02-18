@@ -18,8 +18,7 @@ public class RepositorioAtividade implements IRepositorioAtividade {
 	public void insert(Atividade atividade) throws JSONException, IOException {
 		JSONObject json =  new JSONObject();
 		json.put("nome", atividade.getNome());
-		json.put("quantidadeAlunos", atividade.getQuantidadeAlunos());
-		json.put("categoria", atividade.getCategoria());
+		json.put("tipo", atividade.getTipo());
 		json.put("preco", atividade.getPreco());
 		json.put("duracao", atividade.getDuracao());
 		Envio envio = new Envio("atividade/adicionar",json);
@@ -29,20 +28,19 @@ public class RepositorioAtividade implements IRepositorioAtividade {
 	public void update(Atividade atividade) throws JSONException, IOException {
 		JSONObject json =  new JSONObject();
 		json.put("nome", atividade.getNome());
-		json.put("quantidadeAlunos", atividade.getQuantidadeAlunos());
-		json.put("categoria", atividade.getCategoria());
+		json.put("tipo", atividade.getTipo());
 		json.put("preco", atividade.getPreco());
 		json.put("duracao", atividade.getDuracao());
+		json.put("codigo", atividade.getCodigo());
 		Envio envio = new Envio("atividade/update",json);
 		envio.run();
 	}
 	
-	public void delete(String nome) throws JSONException, IOException {
+	public void delete(int codigo) throws JSONException, IOException {
 		JSONObject json =  new JSONObject();
-		json.put("nome", nome);
-		Envio envio = new Envio("atividade/delete/"+nome,json);
+		json.put("codigo", codigo);
+		Envio envio = new Envio("atividade/delete/"+codigo,json);
 		envio.run();
-		System.out.println(envio.getResults());
 	}	
 	
 	public List<Atividade> select() throws JSONException, IOException {
@@ -55,7 +53,7 @@ public class RepositorioAtividade implements IRepositorioAtividade {
 		List<Atividade> list = new ArrayList<>();
 		for(int i=0;i<jsonArr.length();i++){
 			json = jsonArr.getJSONObject(i);
-			Atividade atividade = new Atividade(json.getString("nome"), json.getInt("quantidadeAlunos"), json.getString("categoria"), json.getDouble("preco"), json.getDouble("duracao"));
+			Atividade atividade = new Atividade(json.getString("nome"), json.getString("tipo"), json.getDouble("preco"), json.getDouble("duracao"),json.getInt("id"));
 			list.add(atividade);
 		}		
 		return list;

@@ -63,7 +63,8 @@ public class TelaCriarUsuario {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblFuncionrio = new JLabel("Funcion\u00E1rio:");
-		lblFuncionrio.setBounds(440, 172, 68, 50);
+		lblFuncionrio.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblFuncionrio.setBounds(440, 172, 77, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblFuncionrio);
 		
 		JComboBox comboBox = new JComboBox();
@@ -71,7 +72,8 @@ public class TelaCriarUsuario {
 		frmLaluAcademiaDe.getContentPane().add(comboBox);
 		
 		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
-		lblUsurio.setBounds(440, 260, 47, 50);
+		lblUsurio.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblUsurio.setBounds(440, 260, 64, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblUsurio);
 		
 		textField = new JTextField();
@@ -80,6 +82,7 @@ public class TelaCriarUsuario {
 		textField.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblSenha.setBounds(440, 337, 52, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblSenha);
 		
@@ -88,6 +91,7 @@ public class TelaCriarUsuario {
 		frmLaluAcademiaDe.getContentPane().add(passwordField);
 		
 		JLabel lblSenha_1 = new JLabel("Senha:");
+		lblSenha_1.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblSenha_1.setBounds(440, 407, 47, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblSenha_1);
 		

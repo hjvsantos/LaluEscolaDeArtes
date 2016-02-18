@@ -12,5 +12,6 @@ public interface IRepositorioAtividade {
 	public void insert(Atividade atividade) throws JSONException, IOException;
 	public void update(Atividade atividade) throws JSONException, IOException;
 	public List<Atividade> select() throws JSONException, IOException;
-	public void delete(String nome) throws JSONException, IOException;
+	public void delete(int codigo) throws JSONException, IOException;
 }
+

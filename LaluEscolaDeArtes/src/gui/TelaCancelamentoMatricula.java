@@ -73,11 +73,13 @@ public class TelaCancelamentoMatricula {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNome.setBounds(367, 171, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
 		JLabel lblValorDoCancelamento = new JLabel("Valor do cancelamento:");
-		lblValorDoCancelamento.setBounds(585, 236, 139, 14);
+		lblValorDoCancelamento.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblValorDoCancelamento.setBounds(561, 236, 139, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblValorDoCancelamento);
 		
 		JPanel panel = new JPanel();
@@ -100,7 +102,8 @@ public class TelaCancelamentoMatricula {
 		frmLaluAcademiaDe.getContentPane().add(rdbtnSemMulta);
 		
 		JLabel lblDesconto = new JLabel("Desconto(%):");
-		lblDesconto.setBounds(585, 266, 75, 50);
+		lblDesconto.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblDesconto.setBounds(585, 266, 96, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblDesconto);
 		
 		textField = new JTextField();

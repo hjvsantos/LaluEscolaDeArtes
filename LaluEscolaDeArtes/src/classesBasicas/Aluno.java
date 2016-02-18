@@ -3,36 +3,37 @@ package classesBasicas;
 import java.util.Date;
 
 public class Aluno {
-	public String nome;
-	public Endereco endereco;
-	public String nomeResponsavel;
+	private String nome;
+	private Endereco endereco;
+	private String nomeResponsavel;
 	private String CPF;
 	private String CPFresponsavel;
 	private String RG;
-	public String email;
-	public Date dataNascimento;
-	public double telefone;
-	public Date dataPagamento;
-	public Matricula matricula;
-	public double valormensalidade;
+	private String email;
+	private Date dataNascimento;
+	private String telefone;
+	private Date dataPagamento;
+	private String matricula;
+	private String celular;
+	private String celular1;
 	
 	public Aluno(String nome, Endereco endereco, String nomeResponsavel,
 			String cPF, String cPFresponsavel, String rG, String email,
-			Date dataNascimento, double telefone, Date dataPagamento,
-			Matricula matricula, double valormensalidade) {
-		super();
+			Date dataNascimento, String telefone, Date dataPagamento,
+			String matricula,String celular,String celular1) {
 		this.nome = nome;
 		this.endereco = endereco;
 		this.nomeResponsavel = nomeResponsavel;
-		CPF = cPF;
-		CPFresponsavel = cPFresponsavel;
-		RG = rG;
+		this.CPF = cPF;
+		this.CPFresponsavel = cPFresponsavel;
+		this.RG = rG;
 		this.email = email;
 		this.dataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.dataPagamento = dataPagamento;
 		this.matricula = matricula;
-		this.valormensalidade = valormensalidade;
+		this.celular = celular;
+		this.celular1 = celular1;
 	}
 
 	public String getNome() {
@@ -99,11 +100,11 @@ public class Aluno {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public double getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(double telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
@@ -115,20 +116,28 @@ public class Aluno {
 		this.dataPagamento = dataPagamento;
 	}
 
-	public Matricula getMatricula() {
+	public String getMatricula() {
 		return matricula;
 	}
 
-	public void setMatricula(Matricula matricula) {
+	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
 
-	public double getValormensalidade() {
-		return valormensalidade;
+	public String getCelular() {
+		return celular;
 	}
 
-	public void setValormensalidade(double valormensalidade) {
-		this.valormensalidade = valormensalidade;
+	public void setCelular(String celular) {
+		this.celular = celular;
 	}
+
+	public String getCelular1() {
+		return celular1;
+	}
+
+	public void setCelular1(String celular1) {
+		this.celular1 = celular1;
+	}	
 			
 	}

@@ -1,5 +1,6 @@
 package classesBasicas;
 
+import classesBasicas.Turma;
 import classesBasicas.Aluno;
 import classesBasicas.Atividade;
 
@@ -8,12 +9,10 @@ public class Matricula {
 	
 	public Aluno aluno;
 	public Turma turma;
-	public String codigo;
 	
-	public Matricula(Aluno aluno, Turma turma, String codigo) {
+	public Matricula(Aluno aluno, Turma turma) {
 		this.aluno = aluno;
 		this.turma = turma;
-		this.codigo = codigo;
 	}
 
 	public Aluno getAluno() {
@@ -30,15 +29,5 @@ public class Matricula {
 
 	public void setTurma(Turma turma) {
 		this.turma = turma;
-	}
-
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
-	
-	
+	}	
 }

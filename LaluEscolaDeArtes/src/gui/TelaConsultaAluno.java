@@ -78,10 +78,12 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
 		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblNome.setBounds(275, 139, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNome);
 		
 		JLabel lblTurma = new JLabel("Turma:");
+		lblTurma.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblTurma.setBounds(870, 139, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblTurma);
 		
@@ -109,11 +111,13 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(btnCancelar);
 		
 		JLabel lblFimDoContrato = new JLabel("Fim do Contrato:");
+		lblFimDoContrato.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblFimDoContrato.setBounds(795, 506, 105, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblFimDoContrato);
 		
 		JLabel lblAMensalidadeEst = new JLabel("A mensalidade est\u00E1: ");
-		lblAMensalidadeEst.setBounds(259, 506, 118, 14);
+		lblAMensalidadeEst.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblAMensalidadeEst.setBounds(236, 506, 141, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblAMensalidadeEst);
 		
 		JButton btnNewButton = new JButton("Notas");
@@ -123,7 +127,8 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(btnNewButton);
 		
 		JLabel lblNDaMatrcula = new JLabel("N\u00BA da matr\u00EDcula:");
-		lblNDaMatrcula.setBounds(533, 506, 97, 14);
+		lblNDaMatrcula.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblNDaMatrcula.setBounds(510, 506, 105, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblNDaMatrcula);
 		
 		textField_3 = new JTextField();
@@ -141,7 +146,7 @@ public class TelaConsultaAluno {
 			e.printStackTrace(); 
 			}
 		textField_2 = new JFormattedTextField(ftmData);
-		textField_2.setBounds(892, 503, 97, 20);
+		textField_2.setBounds(898, 504, 97, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -150,7 +155,8 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(panel_1);
 		
 		JLabel lblEndereo = new JLabel("Endere\u00E7o:");
-		lblEndereo.setBounds(275, 183, 57, 50);
+		lblEndereo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		lblEndereo.setBounds(259, 183, 73, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblEndereo);
 		
 		textField = new JTextField();
@@ -159,6 +165,7 @@ public class TelaConsultaAluno {
 		textField.setColumns(10);
 		
 		JLabel lblCep = new JLabel("CEP:");
+		lblCep.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblCep.setBounds(867, 188, 33, 40);
 		frmLaluAcademiaDe.getContentPane().add(lblCep);
 		
@@ -172,6 +179,7 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(comboBox);
 
 		JLabel lblCidade = new JLabel("Cidade:");
+		lblCidade.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblCidade.setBounds(275, 244, 46, 14);
 		frmLaluAcademiaDe.getContentPane().add(lblCidade);
 		
@@ -181,7 +189,8 @@ public class TelaConsultaAluno {
 		textField_7.setColumns(10);
 		
 		JLabel lblBairro = new JLabel("Bairro:");
-		lblBairro.setBounds(473, 226, 38, 50);
+		lblBairro.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblBairro.setBounds(458, 226, 53, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblBairro);
 		
 		JTextField textField_18 = new JTextField();
@@ -190,6 +199,7 @@ public class TelaConsultaAluno {
 		textField_18.setColumns(10);
 		
 		JLabel lblNmero = new JLabel("N\u00FAmero:");
+		lblNmero.setFont(new Font("Verdana", Font.PLAIN, 12));
 		lblNmero.setBounds(638, 232, 58, 38);
 		frmLaluAcademiaDe.getContentPane().add(lblNmero);
 		
@@ -199,6 +209,7 @@ public class TelaConsultaAluno {
 		textField_19.setColumns(10);
 		
 		JLabel lblEstado = new JLabel("Estado:");
+		lblEstado.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
 		lblEstado.setBounds(270, 269, 51, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblEstado);
 		
@@ -208,7 +219,8 @@ public class TelaConsultaAluno {
 		frmLaluAcademiaDe.getContentPane().add(comboBox_2);
 		
 		JLabel lblComplemento = new JLabel("Complemento:");
-		lblComplemento.setBounds(837, 226, 74, 50);
+		lblComplemento.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
+		lblComplemento.setBounds(837, 226, 86, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblComplemento);
 		
 		textField_4 = new JTextField();

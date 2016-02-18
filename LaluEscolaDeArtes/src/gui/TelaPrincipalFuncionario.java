@@ -116,7 +116,7 @@ public class TelaPrincipalFuncionario {
 		frmLaluAcademiaDe.getContentPane().add(btnNewButton);
 		
 		JLabel lblBuscarAluno = new JLabel("Buscar Aluno:");
-		lblBuscarAluno.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblBuscarAluno.setFont(new Font("Wasco Sans", Font.PLAIN, 15));
 		lblBuscarAluno.setBounds(184, 162, 104, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblBuscarAluno);
 		

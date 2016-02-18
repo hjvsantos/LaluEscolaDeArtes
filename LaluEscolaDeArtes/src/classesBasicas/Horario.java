@@ -1,44 +1,53 @@
 package classesBasicas;
 
+import classesBasicas.Turma;
+
 import java.util.Date;
 
 public class Horario {
 
-		public Turma turma;
-		public Date dia;
-		public Date hora;
-		
-		public Horario(Turma turma, Date dia, Date hora) {
-			super();
-			this.turma = turma;
-			this.dia = dia;
-			this.hora = hora;
-		}
 
-		public Turma getTurma() {
-			return turma;
-		}
+	private Turma turma;
+	private String dia;
+	private String horaentrada;
+	private String horasaida;
+	
+	public Horario(Turma turma, String dia, String horaentrada, String horasaida) {
+		this.turma = turma;
+		this.dia = dia;
+		this.horaentrada = horaentrada;
+		this.horasaida = horasaida;
+	}
 
-		public void setTurma(Turma turma) {
-			this.turma = turma;
-		}
+	public Turma getTurma() {
+		return turma;
+	}
 
-		public Date getDia() {
-			return dia;
-		}
+	public void setTurma(Turma turma) {
+		this.turma = turma;
+	}
 
-		public void setDia(Date dia) {
-			this.dia = dia;
-		}
+	public String getDia() {
+		return dia;
+	}
 
-		public Date getHora() {
-			return hora;
-		}
+	public void setDia(String dia) {
+		this.dia = dia;
+	}
 
-		public void setHora(Date hora) {
-			this.hora = hora;
-		}
-		
-		
-		
+	public String getHoraentrada() {
+		return horaentrada;
+	}
+
+	public void setHoraentrada(String horaentrada) {
+		this.horaentrada = horaentrada;
+	}
+
+	public String getHorasaida() {
+		return horasaida;
+	}
+
+	public void setHorasaida(String horasaida) {
+		this.horasaida = horasaida;
+	}
 }
