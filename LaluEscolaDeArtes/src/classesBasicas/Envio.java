@@ -14,7 +14,7 @@ public class Envio {
 	
 	private String url;
 	private JSONObject json;
-	private static String inicio = "http://localhost:8080/lalu/";
+	private static String inicio = "http://www.apilalu.xyz/";
 	private String results;
 	
 	public Envio(String url, JSONObject json) {
