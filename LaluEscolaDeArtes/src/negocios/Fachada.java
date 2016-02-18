@@ -13,8 +13,10 @@ import classesBasicas.Funcionario;
 import classesBasicas.Horario;
 import classesBasicas.Matricula;
 import classesBasicas.Turma;
+import data.IFachada;
 
-public class Fachada {
+
+public class Fachada implements IFachada{
 	private CadastroAdministrador ca = new CadastroAdministrador();
 	private CadastroAluno caa = new CadastroAluno();
 	private CadastroAtividade cat = new CadastroAtividade();
