@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import javax.swing.UIManager;	
 
 import classesBasicas.Administrador;
 
@@ -135,6 +136,8 @@ public class TelaCriarAdm {
 		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnVoltar.setBounds(623, 539, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
+		EventoBotaoVoltar acaoBtnCancelar = new EventoBotaoVoltar();
+		btnVoltar.addActionListener(acaoBtnCancelar);
 		
 		//açaõ do botao confirmar
 		
@@ -176,7 +179,7 @@ public class TelaCriarAdm {
 			}
 		}
 	}
-	private class EventoBotaoCancelar implements ActionListener {
+	private class EventoBotaoVoltar implements ActionListener {
 		public void actionPerformed(ActionEvent evento) {
 			textField.setText("");
 			textField_2.setText("");
