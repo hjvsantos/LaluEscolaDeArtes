@@ -3,15 +3,24 @@ package gui;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Window.Type;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
-import java.awt.Window.Type;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
-import javax.swing.JButton;
+import javax.swing.JTextField;
+
+import negocios.Fachada;
+
+import org.json.JSONException;
+
+import classesBasicas.Funcionario;
 
 public class TelaCriarUsuario {
 
@@ -100,6 +109,45 @@ public class TelaCriarUsuario {
 		frmLaluAcademiaDe.getContentPane().add(passwordField_1);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Funcionario funcionario = new Funcionario(null, null, null, null, null, null, null, 0, null, null, null, null, null, null);
+				if(textField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Usuario' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}  else if (passwordField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Senha' encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (passwordField_1.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Confirmar senha' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else{
+					String senha = new String(passwordField.getPassword());
+					String senhaConfirma = new String(passwordField_1.getPassword()); 
+					if(senha.equals(senhaConfirma)) {
+						funcionario.setNome(comboBox.getName());
+						funcionario.setLogin(textField.getText());
+						funcionario.setSenha(senha);
+						
+
+						Fachada fachada = new Fachada();
+						try {
+							fachada.cadastrarUsuario(funcionario);//Criação do cadastrarUsuario
+						} catch (JSONException | IOException e1) {
+							e1.printStackTrace();
+						}
+						JOptionPane.showMessageDialog(null, "Novo Usuario criado com sucesso");
+						textField.setText("");
+						passwordField_1.setText("");
+						passwordField.setText("");
+						//TelaCriarAdm.setVisible(false);
+						TelaAbertura telaAbertura = new TelaAbertura();
+						telaAbertura.setVisible(true);
+					}else {
+						JOptionPane.showMessageDialog(null, "As senhas precisam ser iguais!");
+						passwordField.setText("");
+						passwordField_1.setText("");
+					}
+				}
+			}
+		});
 		btnCadastrar.setBounds(676, 514, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnCadastrar);
 		

@@ -36,8 +36,8 @@ public class Funcionario {
 		this.celular1 = celular1;
 		this.email = email;
 		this.endereco = endereco;
-		this.login = login;
-		this.senha = senha;
+		this.login = "";
+		this.senha = "";
 	}
 
 

@@ -168,4 +168,5 @@ public class TelaPrincipalAdm {
 		btnExcluirUsu.setBounds(1101, 312, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnExcluirUsu);
 	}
+
 }

@@ -30,8 +30,16 @@ import java.awt.FlowLayout;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 
+import org.json.JSONException;
+
+import classesBasicas.Administrador;
+import classesBasicas.Funcionario;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+import negocios.Fachada;
 
 public class TelaCadastroFuncionario {
 
@@ -219,6 +227,85 @@ public class TelaCadastroFuncionario {
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Funcionario funcionario = new Funcionario(null, null, null, null, null, null, null, 0, null, null, null, null, null, null);
+				if(textField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_3.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'CPF' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_4.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Complemento' encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+
+				} else if (textField_2.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Função' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_1.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Telefone' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_5.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Data de Nascimento' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_7.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'RG' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_8.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Email' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_9.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Telefone 2' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_10.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Salário' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_11.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Endereço' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_12.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'CEP' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_13.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Cidade' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_14.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Bairro' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_15.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Numero' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else{
+						//String endereço = new String(textField_11.getName() + textField_12.getName() + textField_13.getName() + textField_14.getName() + textField_15.getName() + textField_14.getName()); pode concatenar assim os componentes e gerar um so endereço?
+						funcionario.setNome(textField.getText());
+						funcionario.setFuncao(textField_2.getText());
+						funcionario.setTelefone(textField_1.getText());
+						funcionario.setCPF(textField_3.getText());
+						funcionario.setDataNascimento(textField_5.getText());
+						funcionario.(endereço);
+						funcionario.setSalario(textField_10.getText());
+						funcionario.setEmail(textField_8.getText());
+						funcionario.setRg(textField_7.getText());
+						funcionario.setCelular(textField_9.getText());
+						
+						
+						
+
+						Fachada fachada = new Fachada();
+						try {
+							fachada.cadastrarFuncionario(funcionario);
+						} catch (JSONException | IOException e1) {
+							e1.printStackTrace();
+						}
+						JOptionPane.showMessageDialog(null, "Novo Funcionario criado com sucesso");
+						textField.setText("");
+						textField_1.setText("");
+						textField_2.setText("");
+						textField_3.setText("");
+						textField_4.setText("");
+						textField_5.setText("");
+						textField_7.setText("");
+						textField_8.setText("");
+						textField_9.setText("");
+						textField_10.setText("");
+						textField_11.setText("");
+						textField_12.setText("");
+						textField_13.setText("");
+						textField_14.setText("");
+						textField_15.setText("");
+						//TelaCriarAdm.setVisible(false);
+						TelaPrincipalAdm telaAdm = new TelaPrincipalAdm();
+						//telaAdm.setVisible(true);
+					}
+				
+			}
+		});
 		btnCadastrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnCadastrar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
 		btnCadastrar.setBorder(new CompoundBorder());
@@ -247,7 +334,7 @@ public class TelaCadastroFuncionario {
 		
 		lblCidade = new JLabel("Cidade:");
 		lblCidade.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
-		lblCidade.setBounds(218, 383, 200, 50);
+		lblCidade.setBounds(218, 383, 56, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblCidade);
 		
 		textField_13 = new JTextField();

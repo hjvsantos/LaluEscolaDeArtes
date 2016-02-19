@@ -16,11 +16,14 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import javax.swing.UIManager;	
 
+import org.json.JSONException;
+
 import classesBasicas.Administrador;
 
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import negocios.Fachada;
 
@@ -102,7 +105,7 @@ public class TelaCriarAdm {
 		frmLaluAcademiaDe.getContentPane().add(lblNovoLogin);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(546, 291, 326, 26);
+		textField_2.setBounds(546, 294, 326, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -124,10 +127,54 @@ public class TelaCriarAdm {
 		passwordField_1.setBounds(546, 407, 248, 20);
 		frmLaluAcademiaDe.getContentPane().add(passwordField_1);
 		
-		Administrador administrador = new Administrador(null, null, null, null);
-		EventoBotaoCadastrarAdm acaoBtnCadastrar = new EventoBotaoCadastrarAdm();
+		/*Administrador administrador = new Administrador(null, null, null, null);
+		EventoBotaoCadastrarAdm acaoBtnCadastrar = new EventoBotaoCadastrarAdm();*/
 		
 		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Administrador administrador = new Administrador(null, null, null, null);
+				if(textField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_2.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Login' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (passwordField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Senha' encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+
+				} else if (passwordField_1.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Confirmar senha' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_1.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'CPF' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else{
+					String senha = new String(passwordField.getPassword());
+					String senhaConfirma = new String(passwordField_1.getPassword());
+					if(senha.equals(senhaConfirma)) {
+						administrador.setNome(textField.getText());
+						administrador.setLogin(textField_2.getText());
+						administrador.setSenha(senha);
+						administrador.setCPF(textField_1.getText());
+
+						Fachada fachada = new Fachada();
+						try {
+							fachada.cadastrarAdministrador(administrador);
+						} catch (JSONException | IOException e1) {
+							e1.printStackTrace();
+						}
+						JOptionPane.showMessageDialog(null, "Novo Administrador criado com sucesso");
+						textField.setText("");
+						textField_2.setText("");
+						passwordField.setText("");
+						//TelaCriarAdm.setVisible(false);
+						TelaAbertura telaAbertura = new TelaAbertura();
+						telaAbertura.setVisible(true);
+					}else {
+						JOptionPane.showMessageDialog(null, "As senhas precisam ser iguais!");
+						passwordField.setText("");
+						passwordField_1.setText("");
+					}
+				}
+			}
+		});
 		btnConfirmar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnConfirmar.setBounds(623, 479, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnConfirmar);
@@ -136,58 +183,7 @@ public class TelaCriarAdm {
 		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnVoltar.setBounds(623, 539, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
-		EventoBotaoVoltar acaoBtnCancelar = new EventoBotaoVoltar();
-		btnVoltar.addActionListener(acaoBtnCancelar);
 		
-		//açaõ do botao confirmar
-		
-		private class EventoBotaoCadastrarAdm implements ActionListener {
-			public void actionPerformed(ActionEvent evento) {
-				if(textField.equals("")){
-					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
-				} else if (textField_2.equals("")){
-					JOptionPane.showMessageDialog(null, "O campo 'Username' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
-				} else if (passwordField.equals("")){
-					JOptionPane.showMessageDialog(null, "O campo 'Senha' encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
 
-				} else if (passwordField_1.equals("")){
-					JOptionPane.showMessageDialog(null, "O campo 'Confirmar senha' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
-				}else{
-					String senha = new String(passwordField.getPassword());
-					String senhaConfirma = new String(passwordField_1.getPassword());
-					if(senha.equals(senhaConfirma)) {
-						administrador.setNome(textField.getText());
-						administrador.setLogin(textField_2.getText());
-						administrador.setSenha(senha);
-
-						Fachada fachada = new Fachada();
-						fachada.cadastrarAdministrador(administrador);
-						
-						JOptionPane.showMessageDialog(null, "Novo Administrador criado com sucesso");
-						textField.setText("");
-						textField_2.setText("");
-						passwordField.setText("");
-						TelaCriarAdm.dispose();
-						TelaAbertura telaAbertura = new TelaAbertura();
-						telaAbertura.setVisible(true);
-					}else {
-						JOptionPane.showMessageDialog(null, "As senhas precisam ser iguais!");
-						passwordField.setText("");
-						passwordField_1.setText("");
-					}
-				} 
-			}
-		}
-	}
-	private class EventoBotaoVoltar implements ActionListener {
-		public void actionPerformed(ActionEvent evento) {
-			textField.setText("");
-			textField_2.setText("");
-			passwordField.setText("");
-			passwordField_1.setText("");
-			TelaCriarAdm.dispose();
-			TelaAbertura telaAbertura = new TelaAbertura();
-			telaAbertura.setVisible(true);
-		}
 	}
 }
