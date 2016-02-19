@@ -116,6 +116,13 @@ public class TelaAbertura {
 		frmLaluAcademiaDe.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{frmLaluAcademiaDe.getContentPane()}));
 	}
 
+	public void setVisible(boolean b) {
+		if(b == true)
+			frame.setVisible(b);
+		else
+			frame.setVisible(b);
+	}
+
 
 		
 	}
