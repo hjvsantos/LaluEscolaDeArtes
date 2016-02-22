@@ -20,11 +20,13 @@ import javax.swing.text.MaskFormatter;
 
 import java.awt.Cursor;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.swing.JFormattedTextField;  
 import javax.swing.text.MaskFormatter;
 
 import java.text.ParseException;
+import java.util.Date;
 import java.awt.FlowLayout;
 
 import javax.swing.JComboBox;
@@ -33,6 +35,7 @@ import javax.swing.JFormattedTextField;
 import org.json.JSONException;
 
 import classesBasicas.Administrador;
+import classesBasicas.Endereco;
 import classesBasicas.Funcionario;
 
 import java.awt.event.ActionListener;
@@ -226,6 +229,11 @@ public class TelaCadastroFuncionario {
 		btnVoltar.setBounds(509, 786, 89, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santos", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Pualo", "Sergipe", "Tocatins"}));
+		comboBox.setBounds(838, 398, 165, 20);
+		frmLaluAcademiaDe.getContentPane().add(comboBox);
+		
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -263,13 +271,30 @@ public class TelaCadastroFuncionario {
 					JOptionPane.showMessageDialog(null, "O campo 'Numero' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
 				}else{
 						//String endereço = new String(textField_11.getName() + textField_12.getName() + textField_13.getName() + textField_14.getName() + textField_15.getName() + textField_14.getName()); pode concatenar assim os componentes e gerar um so endereço?
+					Endereco end = new Endereco(null, null, null, null, null, null, null);
+					end.setBairro(textField_14.getText());
+					end.setCep(textField_12.getText());
+					end.setCidade(textField_13.getText());
+					end.setEstado(comboBox.getSelectedItem().toString());
+					end.setNumero(textField_15.getText());
+					end.setComplemento(textField_4.getText());
+					double salario = Double.parseDouble(textField_10.getText());
+					Date data = new Date();
+					SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+					try {
+						data = format.parse(textField_5.getText());
+					} catch (ParseException e2) {
+						e2.printStackTrace();
+					}
+					
+					
 						funcionario.setNome(textField.getText());
 						funcionario.setFuncao(textField_2.getText());
 						funcionario.setTelefone(textField_1.getText());
 						funcionario.setCPF(textField_3.getText());
-						funcionario.setDataNascimento(textField_5.getText());
-						funcionario.(endereço);
-						funcionario.setSalario(textField_10.getText());
+						funcionario.setDataNascimento(data);
+						funcionario.setEndereco(end);
+						funcionario.setSalario(salario);
 						funcionario.setEmail(textField_8.getText());
 						funcionario.setRg(textField_7.getText());
 						funcionario.setCelular(textField_9.getText());
@@ -367,10 +392,6 @@ public class TelaCadastroFuncionario {
 		lblEstado.setBounds(790, 383, 46, 50);
 		frmLaluAcademiaDe.getContentPane().add(lblEstado);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santos", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Pualo", "Sergipe", "Tocatins"}));
-		comboBox.setBounds(838, 398, 165, 20);
-		frmLaluAcademiaDe.getContentPane().add(comboBox);
 		
 		lblComplemento = new JLabel("Complemento:");
 		lblComplemento.setFont(new Font("Wasco Sans", Font.PLAIN, 12));

@@ -9,10 +9,24 @@ import javax.swing.JLabel;
 
 import java.awt.Window.Type;
 import java.awt.Toolkit;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+
+import negocios.Fachada;
+
+import org.json.JSONException;
+
+import classesBasicas.Administrador;
+import classesBasicas.Atividade;
+
 import java.awt.Cursor;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class TelaNovaAtividade {
 
@@ -100,7 +114,44 @@ public class TelaNovaAtividade {
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Recreação", "Oficina de Artes"}));
+		comboBox.setBounds(314, 263, 239, 20);
+		frmLaluAcademiaDe.getContentPane().add(comboBox);
+		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Atividade atividade = new Atividade(null, null, 0, 0, 0);
+				if(textField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_2.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Duração' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_3.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Preço' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else{
+					double preco = Double.parseDouble(textField_3.getText());
+					double duracao = Double.parseDouble(textField_2.getText());
+					
+					
+						atividade.setNome(textField.getText());
+						atividade.setPreco(preco);
+						atividade.setCategoria(comboBox.getSelectedItem().toString());
+						atividade.setDuracao(duracao);
+
+						Fachada fachada = new Fachada();
+						try {
+							fachada.cadastrarAtividade(atividade);
+						} catch (JSONException | IOException e1) {
+							e1.printStackTrace();
+						}
+						JOptionPane.showMessageDialog(null, "Nova atividade cadastrada");
+						textField.setText("");
+						textField_2.setText("");
+						textField_3.setText("");
+					}
+				}
+		});
 		btnCadastrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnCadastrar.setFont(new Font("Verdana", Font.PLAIN, 12));
 		btnCadastrar.setBounds(666, 547, 99, 23);
@@ -112,9 +163,7 @@ public class TelaNovaAtividade {
 		btnVoltar.setBounds(666, 604, 99, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(314, 263, 239, 20);
-		frmLaluAcademiaDe.getContentPane().add(comboBox);
+		
 	}
 
 }

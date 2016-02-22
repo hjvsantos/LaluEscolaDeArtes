@@ -15,7 +15,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.border.CompoundBorder;
+
 import java.awt.Component;
+
 import javax.swing.Box;
 import javax.swing.JScrollPane;
 
@@ -128,6 +130,14 @@ public class TelaPrincipalFuncionario {
 		scrollPane.setBounds(241, 324, 949, 445);
 		frmLaluAcademiaDe.getContentPane().add(scrollPane);
 	}
+
+	public static void setVisible(boolean opcao) {
+		if(opcao == true)
+			TelaPrincipalFuncionario.setVisible(true);
+		else
+			TelaPrincipalFuncionario.setVisible(false);
+	}
+	
 	}
 
 

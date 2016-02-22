@@ -7,6 +7,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import java.awt.Color;
 import java.awt.Window.Type;
@@ -17,10 +18,22 @@ import javax.swing.JButton;
 import javax.swing.border.CompoundBorder;
 import javax.swing.JFormattedTextField;  
 import javax.swing.text.MaskFormatter;
-import java.text.ParseException;
-import java.awt.FlowLayout;
 
+import negocios.Fachada;
+
+import org.json.JSONException;
+
+import classesBasicas.Aluno;
+import classesBasicas.Endereco;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.awt.FlowLayout;
 import java.awt.Cursor;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaMatricula {
 
@@ -198,20 +211,6 @@ public class TelaMatricula {
 		frmLaluAcademiaDe.getContentPane().add(textField_11);
 		textField_11.setColumns(10);
 		
-		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnVoltar.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
-		btnVoltar.setBorder(new CompoundBorder());
-		btnVoltar.setBounds(458, 812, 89, 23);
-		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
-		
-		JButton btnPrximo = new JButton("Confirmar");
-		btnPrximo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnPrximo.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 11));
-		btnPrximo.setBorder(new CompoundBorder());
-		btnPrximo.setBounds(824, 812, 89, 23);
-		frmLaluAcademiaDe.getContentPane().add(btnPrximo);
-		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Recrea\u00E7\u00E3o", "Teatro", "Dan\u00E7a", "Viol\u00E3o"}));
 		comboBox.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -318,7 +317,110 @@ public class TelaMatricula {
 		frmLaluAcademiaDe.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
+		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.addActionListener(new ActionListener() {
+			Aluno aluno = new Aluno(null, null, null, null, null, null, null, null, null, null, null, null, null);
+			public void actionPerformed(ActionEvent e) {
+				if(textField.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_5.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'CPF' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_3.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Complemento' encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_9.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Telefone' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_1.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Data de Nascimento' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_11.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'RG' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_6.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Email' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_7.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Endereço' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_8.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'CEP' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_17.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Cidade' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_18.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Bairro' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_19.equals("")){
+					JOptionPane.showMessageDialog(null, "O campo 'Numero' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else{
+					
+					Endereco end = new Endereco(null, null, null, null, null, null, null);
+					end.setBairro(textField_14.getText());
+					end.setCep(textField_12.getText());
+					end.setCidade(textField_13.getText());
+					end.setEstado(comboBox.getSelectedItem().toString());
+					end.setNumero(textField_19.getText());
+					end.setComplemento(textField_3.getText());
+					Date data = new Date();
+					SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+					try {
+						data = format.parse(textField_1.getText());
+					} catch (ParseException e2) {
+						e2.printStackTrace();
+					}
+					
+						aluno.setNome(textField.getText());
+						aluno.setTelefone(textField_1.getText());
+						aluno.setCPF(textField_3.getText());
+						aluno.setDataNascimento(data);
+						aluno.setEndereco(end);
+						aluno.setEmail(textField_8.getText());
+						aluno.setRG(textField_6.getText());
+						aluno.setCelular(textField_9.getText());
+						
+						
+						
+
+						Fachada fachada = new Fachada();
+						try {
+							fachada.cadastrarAluno(aluno);
+						} catch (JSONException | IOException e1) {
+							e1.printStackTrace();
+						}
+						JOptionPane.showMessageDialog(null, "Matricula realizada com sucesso!");
+						textField.setText("");
+						textField_1.setText("");
+						textField_2.setText("");
+						textField_3.setText("");
+						textField_5.setText("");
+						textField_7.setText("");
+						textField_8.setText("");
+						textField_9.setText("");
+						textField_10.setText("");
+						textField_11.setText("");
+						textField_12.setText("");
+						textField_13.setText("");
+						textField_14.setText("");
+						
+					}
+				
+			}
+			
+		});
+		btnConfirmar.setBounds(562, 543, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnConfirmar);
 		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaMatricula.setVisible(false);
+				TelaPrincipalFuncionario.setVisible(true);
+			}
+		});
+		btnVoltar.setBounds(562, 605, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
+		
+		
+	}
+
+	public static void setVisible(boolean opcao) {
+		if(opcao == true)
+			TelaMatricula.setVisible(true);
+		else
+			TelaMatricula.setVisible(false);
 	}
 
 /*	public void TextFieldComMascara() throws ParseException{  

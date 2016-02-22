@@ -14,13 +14,25 @@ import java.text.ParseException;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JFormattedTextField;
 import javax.swing.text.MaskFormatter;
 import javax.swing.JFormattedTextField;  
 
+import negocios.Fachada;
+
+import org.json.JSONException;
+
+import classesBasicas.Atividade;
+import classesBasicas.Funcionario;
+import classesBasicas.Turma;
+
 import java.text.ParseException;
 import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class TelaNovaTurma {
 
@@ -78,13 +90,7 @@ public class TelaNovaTurma {
 		lblLaluAcademiaDe.setBounds(458, 11, 458, 100);
 		frmLaluAcademiaDe.getContentPane().add(lblLaluAcademiaDe);
 		
-		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(458, 809, 89, 23);
-		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
 		
-		JButton btnConfirmar = new JButton("Confirmar");
-		btnConfirmar.setBounds(840, 809, 89, 23);
-		frmLaluAcademiaDe.getContentPane().add(btnConfirmar);
 		
 		JLabel lblProfessor = new JLabel("Professor:");
 		lblProfessor.setFont(new Font("Wasco Sans", Font.PLAIN, 12));
@@ -175,7 +181,7 @@ public class TelaNovaTurma {
 		frmLaluAcademiaDe.getContentPane().add(comboBox_3);
 		
 		JButton btnNovoHorrio = new JButton("Novo Hor\u00E1rio");
-		btnNovoHorrio.setBounds(999, 281, 95, 23);
+		btnNovoHorrio.setBounds(999, 281, 105, 23);
 		frmLaluAcademiaDe.getContentPane().add(btnNovoHorrio);
 		
 		JLabel lblHorrioIncio = new JLabel("Hor\u00E1rio In\u00EDcio:");
@@ -207,5 +213,67 @@ public class TelaNovaTurma {
 		textField_5.setBounds(583, 313, 86, 20);
 		frmLaluAcademiaDe.getContentPane().add(textField_5);
 		textField_5.setColumns(10);
+		
+		JButton btnCriar = new JButton("Criar");
+		btnCriar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Turma turma = new Turma(null, 0, 0, null, 0);
+				if(((String)comboBox.getSelectedItem()).equals("")){
+					JOptionPane.showMessageDialog(null, "A turma está sem professor! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (((String)comboBox_1.getSelectedItem()).equals("")){
+					JOptionPane.showMessageDialog(null, "A turma está sem atividade! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_2.equals("")){
+					JOptionPane.showMessageDialog(null, "Está sem um limite mínimo", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField_3.equals("")){
+					JOptionPane.showMessageDialog(null, "Está sem um limite máximo", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				} else if (textField.equals("")){
+					JOptionPane.showMessageDialog(null, "Está sem horario de inicio ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_4.equals("")){
+					JOptionPane.showMessageDialog(null, "Está sem horario de inicio ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_1.equals("")){
+					JOptionPane.showMessageDialog(null, "Está sem horario de término ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else if (textField_5.equals("")){
+					JOptionPane.showMessageDialog(null, "Está sem horario de término ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
+				}else{
+					int jml = Integer.parseInt(textField_3.getText());	
+					int jmk = Integer.parseInt(textField_2.getText());
+					Funcionario prof = new Funcionario(null, null, null, null, null, null, null, jmk, null, null, null, null, null, null);
+					prof.setNome(comboBox.getSelectedItem().toString());
+					Atividade atv = new Atividade(null, null, jmk, jmk, jmk);
+					atv.setNome(comboBox_1.getSelectedItem().toString());
+					
+					turma.setLimiteMax(jml);
+					turma.setLimiteMin(jmk);
+					turma.setProfessor(prof);
+					turma.setAtividade(atv);
+					
+				}	
+
+						Fachada fachada = new Fachada();
+						try {
+							fachada.cadastrarTurma(turma);
+						} catch (JSONException | IOException e1) {
+							e1.printStackTrace();
+						}
+						JOptionPane.showMessageDialog(null, "Nova turma criada com sucesso");
+						textField.setText("");
+						textField_2.setText("");
+						textField_1.setText("");
+						textField_3.setText("");
+						textField_4.setText("");
+						textField_5.setText("");
+						
+					
+				}
+			
+		});
+		btnCriar.setBounds(609, 419, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnCriar);
+		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBounds(609, 476, 89, 23);
+		frmLaluAcademiaDe.getContentPane().add(btnVoltar);
+		}
+	
 	}
-}
+
