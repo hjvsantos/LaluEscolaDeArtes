@@ -1,4 +1,4 @@
-package data;
+package negocios;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -40,4 +40,9 @@ public interface IFachada {
 	public void atualizarTurma(Turma turma) throws JSONException, IOException;
 	public void removerTurma(int codigo) throws JSONException, IOException;
 	public List<Turma> retornarTurmas() throws JSONException, IOException;
+	public boolean existeAdministrador(String cpf) throws JSONException, IOException;
+	public boolean logarAdministrador(String cpf,String senha) throws JSONException, IOException;
+	public void criarsenhaFuncionario(String cpf, String senha) throws JSONException, IOException;
+	public boolean existsFuncionario(String cpf) throws JSONException, IOException;
+	public boolean logarFuncionario(String cpf,String senha) throws JSONException, IOException;
 }

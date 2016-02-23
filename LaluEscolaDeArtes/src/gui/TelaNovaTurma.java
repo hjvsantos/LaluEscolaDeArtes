@@ -237,7 +237,7 @@ public class TelaNovaTurma {
 				}else{
 					int jml = Integer.parseInt(textField_3.getText());	
 					int jmk = Integer.parseInt(textField_2.getText());
-					Funcionario prof = new Funcionario(null, null, null, null, null, null, null, jmk, null, null, null, null, null, null);
+					Funcionario prof = new Funcionario(null, null, null, null, null, null, null, jmk, null, null, null, null, null);
 					prof.setNome(comboBox.getSelectedItem().toString());
 					Atividade atv = new Atividade(null, null, jmk, jmk, jmk);
 					atv.setNome(comboBox_1.getSelectedItem().toString());

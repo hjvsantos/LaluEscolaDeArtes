@@ -12,4 +12,6 @@ public interface IRepositorioAdministrador {
 	public void update(Administrador administrador) throws JSONException, IOException;
 	public List<Administrador> select() throws JSONException, IOException;
 	public void delete(String id) throws JSONException, IOException;
+	public boolean exists(String cpf) throws JSONException, IOException;
+	public boolean logar(String cpf,String senha) throws JSONException, IOException;
 }

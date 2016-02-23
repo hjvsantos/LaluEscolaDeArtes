@@ -237,7 +237,7 @@ public class TelaCadastroFuncionario {
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Funcionario funcionario = new Funcionario(null, null, null, null, null, null, null, 0, null, null, null, null, null, null);
+				Funcionario funcionario = new Funcionario(null, null, null, null, null, null, null, 0, null, null, null, null, null);
 				if(textField.equals("")){
 					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
 				} else if (textField_3.equals("")){

@@ -28,4 +28,16 @@ public class CadastroFuncionario {
 	public List<Funcionario> select() throws JSONException, IOException, ParseException{
 		return ra.select();
 	}
+	
+	public void criarsenha(String cpf, String senha) throws JSONException, IOException{
+		ra.criarsenha(cpf, senha);
+	}
+	
+	public boolean exists(String cpf) throws JSONException, IOException{
+		return ra.exists(cpf);
+	}
+	
+	public boolean logar(String cpf,String senha) throws JSONException, IOException{
+		return ra.logar(cpf, senha);
+	}
 }

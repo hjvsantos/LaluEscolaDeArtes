@@ -17,7 +17,6 @@ public class RepositorioAdministrador implements IRepositorioAdministrador{
 		JSONObject json =  new JSONObject();
 		json.put("nome", administrador.getNome());
 		json.put("cpf", administrador.getCPF());
-		json.put("login", administrador.getLogin());
 		json.put("senha", administrador.getSenha());
 		Envio envio = new Envio("administrador/adicionar",json);
 		envio.run();
@@ -27,7 +26,6 @@ public class RepositorioAdministrador implements IRepositorioAdministrador{
 		JSONObject json =  new JSONObject();
 		json.put("nome", administrador.getNome());
 		json.put("cpf", administrador.getCPF());
-		json.put("login", administrador.getLogin());
 		Envio envio = new Envio("administrador/update",json);
 		envio.run();
 	}
@@ -42,7 +40,7 @@ public class RepositorioAdministrador implements IRepositorioAdministrador{
 		List<Administrador> list = new ArrayList<>();
 		for(int i=0;i<jsonArr.length();i++){
 			json = jsonArr.getJSONObject(i);
-			Administrador adm = new Administrador(json.getString("nome"), json.getString("cpf"), json.getString("login"), json.getString("senha"));
+			Administrador adm = new Administrador(json.getString("nome"), json.getString("cpf"), json.getString("senha"));
 			list.add(adm);
 		}		
 		return list;
@@ -54,6 +52,26 @@ public class RepositorioAdministrador implements IRepositorioAdministrador{
 		Envio envio = new Envio("administrador/delete/"+cpf,json);
 		envio.run();
 		System.out.println(envio.getResults());
-	}	
+	}
+	
+	public boolean exists(String cpf) throws JSONException, IOException {
+		JSONObject json =  new JSONObject();
+		json.put("nome", "");
+		Envio envio = new Envio("administrador/exists/"+cpf,json);
+		envio.run();
+		int i = Integer.parseInt(envio.getResults());
+		if(i>0) return true;
+		else return false;
+	}
+	
+	public boolean logar(String cpf,String senha) throws JSONException, IOException {
+		JSONObject json =  new JSONObject();
+		json.put("nome", "");
+		Envio envio = new Envio("administrador/senha/"+cpf+"/"+senha,json);
+		envio.run();
+		int i = Integer.parseInt(envio.getResults());
+		if(i>0) return true;
+		else return false;
+	}
 
 }

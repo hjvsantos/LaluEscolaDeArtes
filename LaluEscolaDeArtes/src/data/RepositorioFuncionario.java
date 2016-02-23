@@ -37,7 +37,6 @@ public class RepositorioFuncionario implements IRepositorioFuncionario {
 		json.put("salario", funcionario.getSalario());
 		json.put("funcao", funcionario.getFuncao());
 		json.put("email", funcionario.getEmail());
-		json.put("login", funcionario.getLogin());
 		json.put("senha", funcionario.getSenha());
 		Envio envio = new Envio("funcionario/adicionar",json);
 		envio.run();
@@ -69,7 +68,6 @@ public class RepositorioFuncionario implements IRepositorioFuncionario {
 		json.put("salario", funcionario.getSalario());
 		json.put("funcao", funcionario.getFuncao());
 		json.put("email", funcionario.getEmail());
-		json.put("login", funcionario.getLogin());
 		Envio envio = new Envio("funcionario/update",json);
 		envio.run();
 	}
@@ -86,11 +84,36 @@ public class RepositorioFuncionario implements IRepositorioFuncionario {
 			json = jsonArr.getJSONObject(i);
 			Endereco endereco = new Endereco(json.getString("logradouro"),json.getString("cidade"),json.getString("bairro"),json.getString("estado"),json.getString("numero"),json.getString("cep"),json.getString("complemento"));
 			DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-			Funcionario funcionario = new Funcionario(json.getString("nome"), json.getString("cpf"), json.getString("rg"), new Date(df.parse(json.getString("datanasc")).getTime()),json.getString("telefone"), json.getString("funcao"), json.getString("matricula"), json.getDouble("salario"), json.getString("celular"), json.getString("celular1"), json.getString("email"), endereco, json.getString("login"), "");
+			Funcionario funcionario = new Funcionario(json.getString("nome"), json.getString("cpf"), json.getString("rg"), new Date(df.parse(json.getString("datanasc")).getTime()),json.getString("telefone"), json.getString("funcao"), json.getString("matricula"), json.getDouble("salario"), json.getString("celular"), json.getString("celular1"), json.getString("email"), endereco, "");
 			list.add(funcionario);
 		}		
 		return list;
 	}
 
-
+	public void criarsenha(String cpf, String senha) throws JSONException, IOException{
+		JSONObject json =  new JSONObject();
+		json.put("nome", "");
+		Envio envio = new Envio("funcionario/exists/"+cpf+"/"+senha,json);
+		envio.run();
+	}
+	
+	public boolean exists(String cpf) throws JSONException, IOException {
+		JSONObject json =  new JSONObject();
+		json.put("nome", "");
+		Envio envio = new Envio("funcionario/exists/"+cpf,json);
+		envio.run();
+		int i = Integer.parseInt(envio.getResults());
+		if(i>0) return true;
+		else return false;
+	}
+	
+	public boolean logar(String cpf,String senha) throws JSONException, IOException {
+		JSONObject json =  new JSONObject();
+		json.put("nome", "");
+		Envio envio = new Envio("funcionario/senha/"+cpf+"/"+senha,json);
+		envio.run();
+		int i = Integer.parseInt(envio.getResults());
+		if(i>0) return true;
+		else return false;
+	}
 }

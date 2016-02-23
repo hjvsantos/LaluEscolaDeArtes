@@ -18,12 +18,11 @@ public class Funcionario {
 	private String celular1;
 	private String email;
 	private Endereco endereco;
-	private String login;
 	private String senha;
 	
 	public Funcionario(String nome, String cPF, String rg, Date dataNascimento,
 			String telefone, String funcao, String matricula, double salario,
-			String celular, String celular1, String email, Endereco endereco,String login,String senha) {
+			String celular, String celular1, String email, Endereco endereco,String senha) {
 		this.nome = nome;
 		CPF = cPF;
 		this.rg = rg;
@@ -36,7 +35,6 @@ public class Funcionario {
 		this.celular1 = celular1;
 		this.email = email;
 		this.endereco = endereco;
-		this.login = "";
 		this.senha = "";
 	}
 
@@ -155,21 +153,9 @@ public class Funcionario {
 		return endereco;
 	}
 
-
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-
-
-	public String getLogin() {
-		return login;
-	}
-
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
 
 	public String getSenha() {
 		return senha;

@@ -133,7 +133,7 @@ public class TelaCriarAdm {
 		JButton btnConfirmar = new JButton("Confirmar");
 		btnConfirmar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Administrador administrador = new Administrador(null, null, null, null);
+				Administrador administrador = new Administrador(null, null, null);
 				if(textField.equals("")){
 					JOptionPane.showMessageDialog(null, "O campo 'Nome' se encontra vazio! ", "Mensagem de alerta", JOptionPane.ERROR_MESSAGE);
 				} else if (textField_2.equals("")){
@@ -150,7 +150,6 @@ public class TelaCriarAdm {
 					String senhaConfirma = new String(passwordField_1.getPassword());
 					if(senha.equals(senhaConfirma)) {
 						administrador.setNome(textField.getText());
-						administrador.setLogin(textField_2.getText());
 						administrador.setSenha(senha);
 						administrador.setCPF(textField_1.getText());
 

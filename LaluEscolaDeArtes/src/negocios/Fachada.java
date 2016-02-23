@@ -13,7 +13,6 @@ import classesBasicas.Funcionario;
 import classesBasicas.Horario;
 import classesBasicas.Matricula;
 import classesBasicas.Turma;
-import data.IFachada;
 
 
 public class Fachada implements IFachada{
@@ -123,5 +122,26 @@ public class Fachada implements IFachada{
 	
 	public List<Turma> retornarTurmas() throws JSONException, IOException{
 		return ct.select();
+	}
+	
+	public boolean existeAdministrador(String cpf) throws JSONException, IOException{
+		return ca.exists(cpf);
+	}
+	
+	public boolean logarAdministrador(String cpf,String senha) throws JSONException, IOException{
+		return ca.logar(cpf, senha);
+	}
+
+	public void criarsenhaFuncionario(String cpf, String senha) throws JSONException, IOException {
+		cf.criarsenha(cpf, senha);
+		
+	}
+
+	public boolean existsFuncionario(String cpf) throws JSONException, IOException {
+		return cf.exists(cpf);
+	}
+
+	public boolean logarFuncionario(String cpf, String senha) throws JSONException, IOException {
+		return cf.logar(cpf, senha);
 	}
 }

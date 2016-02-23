@@ -27,4 +27,12 @@ public class CadastroAdministrador {
 	public List<Administrador> select() throws JSONException, IOException{
 		return ra.select();
 	}
+	
+	public boolean exists(String cpf) throws JSONException, IOException{
+		return ra.exists(cpf);
+	}
+	
+	public boolean logar(String cpf,String senha) throws JSONException, IOException{
+		return ra.logar(cpf, senha);
+	}
 }

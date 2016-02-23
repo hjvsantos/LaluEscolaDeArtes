@@ -56,7 +56,7 @@ public class RepositorioTurma implements IRepositorioTurma{
 		List<Turma> list = new ArrayList<>();
 		for(int i=0;i<jsonArr.length();i++){
 			json = jsonArr.getJSONObject(i);
-			Funcionario f = new Funcionario(null, null, null, null, null, null, null, i, null, null, null, null, null, null);
+			Funcionario f = new Funcionario(null, null, null, null, null, null, null, i, null, null, null, null, null);
 			f.setMatricula(json.getString("matricula"));
 			f.setNome(json.getString("professornome"));
 			Atividade a = new Atividade(null, null, 0, 0, 0);
